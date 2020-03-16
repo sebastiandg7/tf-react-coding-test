@@ -10,5 +10,13 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "react-coding-test": {
+      "tags": []
+    },
+    "react-coding-test-e2e": {
+      "tags": [],
+      "implicitDependencies": ["react-coding-test"]
+    }
+  }
 }
