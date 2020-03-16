@@ -140,6 +140,34 @@
           }
         }
       }
+    },
+    "react-ui": {
+      "root": "libs/react/ui",
+      "sourceRoot": "libs/react/ui/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/react/ui/.eslintrc",
+            "tsConfig": [
+              "libs/react/ui/tsconfig.lib.json",
+              "libs/react/ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/react/ui/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/react/ui/jest.config.js",
+            "tsConfig": "libs/react/ui/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
