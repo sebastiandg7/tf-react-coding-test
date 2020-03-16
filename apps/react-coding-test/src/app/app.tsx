@@ -1,9 +1,10 @@
 import React, { Suspense, lazy } from 'react';
-import { Route, Link, Switch } from 'react-router-dom';
+import { Route, Link, Switch, Redirect } from 'react-router-dom';
 import styled from 'styled-components';
 
 import './styles/global-styles.scss';
 import NavigationBar from './components/navigation-bar/navigation-bar';
+import { NotFound } from '@tf-test/react/ui';
 
 const ReactCodingTestFeatureInputComponents = lazy(() =>
   import('@tf-test/react-coding-test/feature-input-components')
@@ -76,6 +77,8 @@ export const App = () => {
               exact
               component={ReactCodingTestFeatureRegsiterForm}
             />
+            <Route path="/404" exact component={NotFound} />
+            <Redirect from="*" to="/404" />
             {/* END: routes */}
           </Switch>
         </Suspense>
