@@ -40,9 +40,10 @@ export const App = () => {
   return (
     <StyledApp>
       <header>
-        <NavigationBar></NavigationBar>
+        <NavigationBar />
       </header>
       <main>
+        
       </main>
 
       {/* START: routes */}
