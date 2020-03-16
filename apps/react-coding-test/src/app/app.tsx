@@ -3,9 +3,6 @@ import { Route, Link, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 
 import './styles/global-styles.scss';
-
-import { ReactComponent as Logo } from './logo.svg';
-import star from './star.svg';
 import NavigationBar from './components/navigation-bar/navigation-bar';
 
 const ReactCodingTestFeatureInputComponents = lazy(() =>
