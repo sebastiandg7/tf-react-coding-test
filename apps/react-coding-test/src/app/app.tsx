@@ -63,14 +63,17 @@ export const App = () => {
             />
             <Route
               path="/input-components"
+              exact
               component={ReactCodingTestFeatureInputComponents}
             />
             <Route
               path="/voting-list"
+              exact
               component={ReactCodingTestFeatureVotingList}
             />
             <Route
               path="/register-form"
+              exact
               component={ReactCodingTestFeatureRegsiterForm}
             />
             {/* END: routes */}

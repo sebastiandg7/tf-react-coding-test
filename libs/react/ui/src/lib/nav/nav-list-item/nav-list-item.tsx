@@ -9,6 +9,11 @@ export interface NavListItemProps {
 
 const StyledNavListItem = styled.li`
   margin-left: 2em;
+
+  a.active {
+      border-bottom: 1px solid #fff;
+    }
+  }
 `;
 
 export const NavListItem = (props: NavListItemProps) => {

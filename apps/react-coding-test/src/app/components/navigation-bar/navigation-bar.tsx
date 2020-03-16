@@ -17,7 +17,7 @@ export const NavigationBar = (props: NavigationBarProps) => {
       </NavLogo>
       <NavList>
         <NavListItem>
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/" exact activeClassName="active">
             Home
           </NavLink>
         </NavListItem>
