@@ -22,8 +22,13 @@ export const NavigationBar = (props: NavigationBarProps) => {
           </NavLink>
         </NavListItem>
         <NavListItem>
-          <NavLink to="/feature-input-components" activeClassName="active">
+          <NavLink to="/input-components" activeClassName="active">
             Input Components
+          </NavLink>
+        </NavListItem>
+        <NavListItem>
+          <NavLink to="/voting-list" activeClassName="active">
+            Voting List
           </NavLink>
         </NavListItem>
       </NavList>

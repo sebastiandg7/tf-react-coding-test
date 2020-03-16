@@ -9,6 +9,10 @@ const ReactCodingTestFeatureInputComponents = lazy(() =>
   import('@tf-test/react-coding-test/feature-input-components')
 );
 
+const ReactCodingTestFeatureVotingList = lazy(() =>
+  import('@tf-test/react-coding-test/feature-voting-list')
+);
+
 const StyledApp = styled.div`
   /*
  * Remove template code below
@@ -42,9 +46,7 @@ export const App = () => {
       <header>
         <NavigationBar />
       </header>
-      <main>
-        
-      </main>
+      <main></main>
 
       {/* START: routes */}
       {/* These routes and navigation have been generated for you */}
@@ -54,25 +56,15 @@ export const App = () => {
           <Route
             path="/"
             exact
-            render={() => (
-              <div>
-                This is the generated root route.{' '}
-                <Link to="/page-2">Click here for page 2.</Link>
-              </div>
-            )}
+            render={() => <div>This is the generated root route.</div>}
           />
           <Route
-            path="/feature-input-components"
+            path="/input-components"
             component={ReactCodingTestFeatureInputComponents}
           />
           <Route
-            path="/page-2"
-            exact
-            render={() => (
-              <div>
-                <Link to="/">Click here to go back to root page.</Link>
-              </div>
-            )}
+            path="/voting-list"
+            component={ReactCodingTestFeatureVotingList}
           />
           {/* END: routes */}
         </Switch>

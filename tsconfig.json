@@ -19,7 +19,10 @@
       "@tf-test/react-coding-test/feature-input-components": [
         "libs/react-coding-test/feature-input-components/src/index.ts"
       ],
-      "@tf-test/react/ui": ["libs/react/ui/src/index.ts"]
+      "@tf-test/react/ui": ["libs/react/ui/src/index.ts"],
+      "@tf-test/react-coding-test/feature-voting-list": [
+        "libs/react-coding-test/feature-voting-list/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
