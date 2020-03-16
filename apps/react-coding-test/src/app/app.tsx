@@ -13,6 +13,10 @@ const ReactCodingTestFeatureVotingList = lazy(() =>
   import('@tf-test/react-coding-test/feature-voting-list')
 );
 
+const ReactCodingTestFeatureRegsiterForm = lazy(() =>
+  import('@tf-test/react-coding-test/feature-regsiter-form')
+);
+
 const StyledApp = styled.div`
   /*
  * Remove template code below
@@ -20,7 +24,7 @@ const StyledApp = styled.div`
 
   font-family: sans-serif;
   min-width: 300px;
-  max-width: 700px;
+  max-width: 800px;
   margin: 50px auto;
 
   header {
@@ -31,7 +35,7 @@ const StyledApp = styled.div`
   }
 
   main {
-    padding: 0 36px;
+    padding: 0 3em;
   }
 `;
 
@@ -46,29 +50,33 @@ export const App = () => {
       <header>
         <NavigationBar />
       </header>
-      <main></main>
-
-      {/* START: routes */}
-      {/* These routes and navigation have been generated for you */}
-      {/* Feel free to move and update them to fit your needs */}
-      <Suspense fallback={<span>Loading...</span>}>
-        <Switch>
-          <Route
-            path="/"
-            exact
-            render={() => <div>This is the generated root route.</div>}
-          />
-          <Route
-            path="/input-components"
-            component={ReactCodingTestFeatureInputComponents}
-          />
-          <Route
-            path="/voting-list"
-            component={ReactCodingTestFeatureVotingList}
-          />
-          {/* END: routes */}
-        </Switch>
-      </Suspense>
+      <main>
+        {/* START: routes */}
+        {/* These routes and navigation have been generated for you */}
+        {/* Feel free to move and update them to fit your needs */}
+        <Suspense fallback={<span>Loading...</span>}>
+          <Switch>
+            <Route
+              path="/"
+              exact
+              render={() => <div>This is the generated root route.</div>}
+            />
+            <Route
+              path="/input-components"
+              component={ReactCodingTestFeatureInputComponents}
+            />
+            <Route
+              path="/voting-list"
+              component={ReactCodingTestFeatureVotingList}
+            />
+            <Route
+              path="/register-form"
+              component={ReactCodingTestFeatureRegsiterForm}
+            />
+            {/* END: routes */}
+          </Switch>
+        </Suspense>
+      </main>
     </StyledApp>
   );
 };

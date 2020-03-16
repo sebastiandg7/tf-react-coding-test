@@ -31,6 +31,11 @@ export const NavigationBar = (props: NavigationBarProps) => {
             Voting List
           </NavLink>
         </NavListItem>
+        <NavListItem>
+          <NavLink to="/register-form" activeClassName="active">
+            Register Form
+          </NavLink>
+        </NavListItem>
       </NavList>
     </NavBar>
   );

@@ -22,6 +22,9 @@
       "@tf-test/react/ui": ["libs/react/ui/src/index.ts"],
       "@tf-test/react-coding-test/feature-voting-list": [
         "libs/react-coding-test/feature-voting-list/src/index.ts"
+      ],
+      "@tf-test/react-coding-test/feature-regsiter-form": [
+        "libs/react-coding-test/feature-regsiter-form/src/index.ts"
       ]
     }
   },
