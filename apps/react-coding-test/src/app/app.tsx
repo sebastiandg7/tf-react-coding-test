@@ -1,13 +1,13 @@
-import React from 'react';
-
+import React, { Suspense, lazy } from 'react';
+import { Route, Link, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
 
-import { Route, Link } from 'react-router-dom';
-
-import { ReactCodingTestFeatureInputComponents } from '@tf-test/react-coding-test/feature-input-components';
+const ReactCodingTestFeatureInputComponents = lazy(() =>
+  import('@tf-test/react-coding-test/feature-input-components')
+);
 
 const StyledApp = styled.div`
   /*
@@ -257,30 +257,34 @@ nx affected:e2e
           </li>
         </ul>
       </div>
-      <Route
-        path="/"
-        exact
-        render={() => (
-          <div>
-            This is the generated root route.{' '}
-            <Link to="/page-2">Click here for page 2.</Link>
-          </div>
-        )}
-      />
-      <Route
-        path="/feature-input-components"
-        component={ReactCodingTestFeatureInputComponents}
-      />
-      <Route
-        path="/page-2"
-        exact
-        render={() => (
-          <div>
-            <Link to="/">Click here to go back to root page.</Link>
-          </div>
-        )}
-      />
-      {/* END: routes */}
+      <Suspense fallback={<span>Loading...</span>}>
+        <Switch>
+          <Route
+            path="/"
+            exact
+            render={() => (
+              <div>
+                This is the generated root route.{' '}
+                <Link to="/page-2">Click here for page 2.</Link>
+              </div>
+            )}
+          />
+          <Route
+            path="/feature-input-components"
+            component={ReactCodingTestFeatureInputComponents}
+          />
+          <Route
+            path="/page-2"
+            exact
+            render={() => (
+              <div>
+                <Link to="/">Click here to go back to root page.</Link>
+              </div>
+            )}
+          />
+          {/* END: routes */}
+        </Switch>
+      </Suspense>
     </StyledApp>
   );
 };
