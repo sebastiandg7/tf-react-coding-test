@@ -109,6 +109,37 @@
           }
         }
       }
+    },
+    "react-coding-test-feature-input-components": {
+      "root": "libs/react-coding-test/feature-input-components",
+      "sourceRoot": "libs/react-coding-test/feature-input-components/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/react-coding-test/feature-input-components/.eslintrc",
+            "tsConfig": [
+              "libs/react-coding-test/feature-input-components/tsconfig.lib.json",
+              "libs/react-coding-test/feature-input-components/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/react-coding-test/feature-input-components/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/react-coding-test/feature-input-components/jest.config.js",
+            "tsConfig": "libs/react-coding-test/feature-input-components/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

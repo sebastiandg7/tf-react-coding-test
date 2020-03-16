@@ -7,6 +7,8 @@ import star from './star.svg';
 
 import { Route, Link } from 'react-router-dom';
 
+import { ReactCodingTestFeatureInputComponents } from '@tf-test/react-coding-test/feature-input-components';
+
 const StyledApp = styled.div`
   /*
  * Remove template code below
@@ -246,6 +248,11 @@ nx affected:e2e
             <Link to="/">Home</Link>
           </li>
           <li>
+            <Link to="/feature-input-components">
+              ReactCodingTestFeatureInputComponents
+            </Link>
+          </li>
+          <li>
             <Link to="/page-2">Page 2</Link>
           </li>
         </ul>
@@ -259,6 +266,10 @@ nx affected:e2e
             <Link to="/page-2">Click here for page 2.</Link>
           </div>
         )}
+      />
+      <Route
+        path="/feature-input-components"
+        component={ReactCodingTestFeatureInputComponents}
       />
       <Route
         path="/page-2"

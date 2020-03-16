@@ -17,6 +17,9 @@
     "react-coding-test-e2e": {
       "tags": [],
       "implicitDependencies": ["react-coding-test"]
+    },
+    "react-coding-test-feature-input-components": {
+      "tags": []
     }
   }
 }
