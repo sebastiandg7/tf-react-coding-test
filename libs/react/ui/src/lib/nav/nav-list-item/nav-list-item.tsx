@@ -10,10 +10,24 @@ export interface NavListItemProps {
 const StyledNavListItem = styled.li`
   margin-left: 2em;
 
-  a.active {
-      border-bottom: 1px solid #fff;
-    }
+  a {
+    border-radius: 3px;
+    padding: 0.2em;
   }
+
+  a:focus {
+    border-color: #fff;
+    background-color: #143055;
+    color: #fff;
+  }
+
+  a:hover,
+  a.active {
+    background-color: #fff;
+    color: #143055;
+  }
+
+
 `;
 
 export const NavListItem = (props: NavListItemProps) => {
