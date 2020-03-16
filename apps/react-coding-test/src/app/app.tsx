@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import './styles/global-styles.scss';
 import NavigationBar from './components/navigation-bar/navigation-bar';
+import Home from './components/home/home';
 import { NotFound } from '@tf-test/react/ui';
 
 const ReactCodingTestFeatureInputComponents = lazy(() =>
@@ -60,7 +61,7 @@ export const App = () => {
             <Route
               path="/"
               exact
-              render={() => <div>This is the generated root route.</div>}
+              render={Home}
             />
             <Route
               path="/input-components"
