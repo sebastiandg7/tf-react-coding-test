@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 /* eslint-disable-next-line */
 export interface ToggleSwitchProps {
-  rounded: false;
+  rounded: boolean;
 }
 
 const StyledToggleSwitch = styled.div`
@@ -73,7 +73,7 @@ export const ToggleSwitch = ({ rounded = false }: ToggleSwitchProps) => {
     <StyledToggleSwitch>
       <label className="switch">
         <input type="checkbox" />
-        <span className={'slider ' + rounded ? 'rounded' : ''}></span>
+        <span className={`slider ' + ${rounded ? 'round' : ''}`}></span>
       </label>
     </StyledToggleSwitch>
   );
