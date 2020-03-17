@@ -1,10 +1,7 @@
-import {
-  IRegisterFormState,
-  IRegisterFormAwareState
-} from './register-form.module.contract';
-import { IModule } from 'redux-dynamic-modules';
 import { combineReducers } from '@reduxjs/toolkit';
-import { entitiesReducer } from './reducers';
+import { IModule } from 'redux-dynamic-modules';
+import { entitiesReducer, loadedReducer } from './reducers';
+import { IRegisterFormAwareState } from './register-form.module.contract';
 
 export const REGISTER_FORM_FEATURE_KEY = 'registerForm';
 
@@ -14,7 +11,7 @@ export function getRegisterFormModule(): IModule<IRegisterFormAwareState> {
     reducerMap: {
       [REGISTER_FORM_FEATURE_KEY]: combineReducers({
         entities: entitiesReducer,
-        loaded: null,
+        loaded: loadedReducer,
         error: null
       })
     }
@@ -23,9 +20,3 @@ export function getRegisterFormModule(): IModule<IRegisterFormAwareState> {
     // finalActions: []
   };
 }
-
-export const initialRegisterFormState: IRegisterFormState = {
-  entities: [],
-  loaded: false,
-  error: null
-};
