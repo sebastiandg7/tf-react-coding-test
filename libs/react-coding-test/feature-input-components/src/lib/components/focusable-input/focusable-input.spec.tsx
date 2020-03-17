@@ -5,7 +5,7 @@ import FocusableInput from './focusable-input';
 
 describe(' FocusableInput', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<FocusableInput />);
+    const { baseElement } = render(<FocusableInput focused={false} />);
     expect(baseElement).toBeTruthy();
   });
 });
