@@ -23,6 +23,6 @@ describe('App', () => {
       </BrowserRouter>
     );
 
-    expect(getByText('Welcome to react-coding-test!')).toBeTruthy();
+    expect(getByText('Sebastián Duque Gutiérrez')).toBeTruthy();
   });
 });
