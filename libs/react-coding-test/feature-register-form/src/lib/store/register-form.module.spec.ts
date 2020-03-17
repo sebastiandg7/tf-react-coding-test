@@ -3,7 +3,7 @@ import {
   getRegisterFormStart,
   getRegisterFormFailure,
   getRegisterFormSuccess
-} from './register-form.slice';
+} from './register-form.module';
 
 describe('registerForm reducer', () => {
   it('should handle initial state', () => {

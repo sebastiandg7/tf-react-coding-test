@@ -1,6 +1,8 @@
 import React from 'react';
 
 import styled from 'styled-components';
+import { DynamicModuleLoader } from 'redux-dynamic-modules';
+import { getRegisterFormModule } from './store';
 
 /* eslint-disable-next-line */
 export interface ReactCodingTestFeatureRegisterFormProps {}
@@ -13,9 +15,11 @@ export const ReactCodingTestFeatureRegisterForm = (
   props: ReactCodingTestFeatureRegisterFormProps
 ) => {
   return (
-    <StyledReactCodingTestFeatureRegisterForm>
-      <h1>Welcome to react-coding-test-feature-register-form component!</h1>
-    </StyledReactCodingTestFeatureRegisterForm>
+    <DynamicModuleLoader modules={[getRegisterFormModule()]}>
+      <StyledReactCodingTestFeatureRegisterForm>
+        <h1>Welcome to react-coding-test-feature-register-form component!</h1>
+      </StyledReactCodingTestFeatureRegisterForm>
+    </DynamicModuleLoader>
   );
 };
 
