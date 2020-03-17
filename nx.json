@@ -32,6 +32,9 @@
     },
     "shared-util-voting-candidates": {
       "tags": []
+    },
+    "shared-util-validators": {
+      "tags": []
     }
   }
 }

@@ -28,6 +28,9 @@
       ],
       "@tf-test/shared/util-voting-candidates": [
         "libs/shared/util-voting-candidates/src/index.ts"
+      ],
+      "@tf-test/shared/util-validators": [
+        "libs/shared/util-validators/src/index.ts"
       ]
     }
   },
