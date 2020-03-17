@@ -20,11 +20,7 @@ const ReactCodingTestFeatureRegsiterForm = lazy(() =>
 );
 
 const StyledApp = styled.div`
-  /*
- * Remove template code below
- */
-
-  font-family: sans-serif;
+  height: 100%;
   min-width: 300px;
   max-width: 800px;
   margin: 50px auto;
@@ -37,6 +33,7 @@ const StyledApp = styled.div`
   }
 
   main {
+    height: 100%;
     padding: 1em 3em;
   }
 `;
@@ -58,11 +55,7 @@ export const App = () => {
         {/* Feel free to move and update them to fit your needs */}
         <Suspense fallback={<span>Loading...</span>}>
           <Switch>
-            <Route
-              path="/"
-              exact
-              render={Home}
-            />
+            <Route path="/" exact render={Home} />
             <Route
               path="/input-components"
               exact
