@@ -5,6 +5,8 @@ import styled from 'styled-components';
 /* eslint-disable-next-line */
 export interface ToggleSwitchProps {
   rounded: boolean;
+  value: boolean;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const StyledToggleSwitch = styled.div`
@@ -68,12 +70,12 @@ const StyledToggleSwitch = styled.div`
   }
 `;
 
-export const ToggleSwitch = ({ rounded = false }: ToggleSwitchProps) => {
+export const ToggleSwitch = (props: ToggleSwitchProps) => {
   return (
     <StyledToggleSwitch>
       <label className="switch">
-        <input type="checkbox" />
-        <span className={`slider ${rounded ? 'round' : ''}`}></span>
+        <input type="checkbox" value={'' + props.value} onChange={props.onChange} />
+        <span className={`slider ${props.rounded ? 'round' : ''}`}></span>
       </label>
     </StyledToggleSwitch>
   );

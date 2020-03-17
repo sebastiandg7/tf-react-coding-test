@@ -1,18 +1,27 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 import styled from 'styled-components';
+import { TextInput, TextInputProps } from '@tf-test/react/ui';
 
 /* eslint-disable-next-line */
-export interface FocusableInputProps {}
+export interface FocusableInputProps extends TextInputProps {
+  focused: boolean;
+}
 
-const StyledFocusableInput = styled.div`
-  color: pink;
-`;
+const StyledFocusableInput = styled.div``;
 
 export const FocusableInput = (props: FocusableInputProps) => {
+  const inputRef = useRef<HTMLInputElement>();
+
+  useEffect(() => {
+    if (props.focused) {
+      inputRef.current.focus();
+    }
+  });
+
   return (
     <StyledFocusableInput>
-      <h1>Welcome to focusable-input component!</h1>
+      <TextInput ref={inputRef} {...props} />
     </StyledFocusableInput>
   );
 };

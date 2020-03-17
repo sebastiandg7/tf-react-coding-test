@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import styled from 'styled-components';
 
 /* eslint-disable-next-line */
-export interface TextInputProps {}
+export interface TextInputProps {
+  placeHolder: string;
+}
 
 const StyledTextInput = styled.div`
   .txt-input {
@@ -18,17 +20,21 @@ const StyledTextInput = styled.div`
   }
 `;
 
-export const TextInput = (props: TextInputProps) => {
-  return (
-    <StyledTextInput>
-      <input
-        type="text"
-        className="txt-input"
-        id="name"
-        required={true}
-      />
-    </StyledTextInput>
-  );
-};
+export const TextInput = React.forwardRef(
+  (props: TextInputProps, ref: React.Ref<HTMLInputElement>) => {
+    return (
+      <StyledTextInput>
+        <input
+          ref={ref}
+          type="text"
+          className="txt-input"
+          id="name"
+          placeholder={props.placeHolder}
+          required={true}
+        />
+      </StyledTextInput>
+    );
+  }
+);
 
 export default TextInput;

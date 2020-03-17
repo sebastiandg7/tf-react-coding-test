@@ -51,6 +51,11 @@ export const ReactCodingTestFeatureInputComponents = (
   props: ReactCodingTestFeatureInputComponentsProps
 ) => {
   const [inputRendered, setInputRendered] = useState(true);
+  const [focused, setFocused] = useState(false);
+
+  const onFocusedChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFocused(Boolean(event.target.checked));
+  };
 
   return (
     <StyledReactCodingTestFeatureInputComponents>
@@ -61,7 +66,11 @@ export const ReactCodingTestFeatureInputComponents = (
               Input focused
             </label>
             <div className="setttings-property-value">
-              <ToggleSwitch rounded={true} />
+              <ToggleSwitch
+                rounded={true}
+                value={focused}
+                onChange={onFocusedChange}
+              />
             </div>
           </div>
         </div>
@@ -74,7 +83,13 @@ export const ReactCodingTestFeatureInputComponents = (
         >{`${inputRendered ? 'Remove' : 'Render'} input`}</button>
       </div>
 
-      <div className="result">{inputRendered ? <FocusableInput /> : <></>}</div>
+      <div className="result">
+        {inputRendered ? (
+          <FocusableInput focused={focused} placeHolder="Focusable input" />
+        ) : (
+          <></>
+        )}
+      </div>
     </StyledReactCodingTestFeatureInputComponents>
   );
 };
