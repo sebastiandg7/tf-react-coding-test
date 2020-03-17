@@ -1,3 +1,7 @@
+import { VOTING_LIST_FEATURE_KEY } from './voting-list.module';
+
+export type VotingListError = any;
+
 export interface VotingListEntity {
   id: number;
 }
