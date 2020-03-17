@@ -73,7 +73,7 @@ export const ToggleSwitch = ({ rounded = false }: ToggleSwitchProps) => {
     <StyledToggleSwitch>
       <label className="switch">
         <input type="checkbox" />
-        <span className={`slider ' + ${rounded ? 'round' : ''}`}></span>
+        <span className={`slider ${rounded ? 'round' : ''}`}></span>
       </label>
     </StyledToggleSwitch>
   );
