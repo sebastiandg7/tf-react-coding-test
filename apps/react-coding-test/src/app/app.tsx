@@ -37,7 +37,7 @@ const StyledApp = styled.div`
   }
 
   main {
-    padding: 0 3em;
+    padding: 1em 3em;
   }
 `;
 
