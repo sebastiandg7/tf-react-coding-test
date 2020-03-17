@@ -13,8 +13,16 @@ import {
   votingListReducer
 } from '@tf-test/react-coding-test/feature-voting-list';
 
+import {
+  REGISTER_FORM_FEATURE_KEY,
+  registerFormReducer
+} from '@tf-test/react-coding-test/feature-register-form';
+
 const store = configureStore({
-  reducer: { [VOTING_LIST_FEATURE_KEY]: votingListReducer }
+  reducer: {
+    [REGISTER_FORM_FEATURE_KEY]: registerFormReducer,
+    [VOTING_LIST_FEATURE_KEY]: votingListReducer
+  }
 });
 
 ReactDOM.render(
