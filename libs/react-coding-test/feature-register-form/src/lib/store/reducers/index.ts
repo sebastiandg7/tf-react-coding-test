@@ -12,3 +12,9 @@ export const entitiesReducer = createReducer(initialState, builder => {
     }
   );
 });
+
+export const loadedReducer = createReducer(false, builder => {
+  builder.addCase(getRegisterFormStart, (state: boolean, action) => {
+    console.log(`It works... Loaded`);
+  });
+});

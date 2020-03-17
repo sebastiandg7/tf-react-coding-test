@@ -1,6 +1,6 @@
 import { combineReducers } from '@reduxjs/toolkit';
 import { IModule } from 'redux-dynamic-modules';
-import { entitiesReducer } from './reducers';
+import { entitiesReducer, loadedReducer } from './reducers';
 import {
   IVotingListAwareState,
   IVotingListState
@@ -14,8 +14,8 @@ export function getVotingListModule(): IModule<IVotingListAwareState> {
     reducerMap: {
       [VOTING_LIST_FEATURE_KEY]: combineReducers({
         entities: entitiesReducer,
-        loaded: entitiesReducer,
-        error: entitiesReducer
+        loaded: loadedReducer,
+        error: null
       })
     }
     // Actions to fire when this module is added/removed
@@ -23,9 +23,3 @@ export function getVotingListModule(): IModule<IVotingListAwareState> {
     // finalActions: []
   };
 }
-
-export const initialVotingListState: IVotingListState = {
-  entities: [],
-  loaded: false,
-  error: null
-};
