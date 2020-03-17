@@ -3,7 +3,7 @@ import {
   getVotingListStart,
   getVotingListFailure,
   getVotingListSuccess
-} from './voting-list.slice';
+} from './voting-list.module';
 
 describe('votingList reducer', () => {
   it('should handle initial state', () => {
