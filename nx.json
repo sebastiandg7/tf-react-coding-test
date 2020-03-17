@@ -35,6 +35,9 @@
     },
     "shared-util-validators": {
       "tags": []
+    },
+    "shared-util-formatters": {
+      "tags": []
     }
   }
 }

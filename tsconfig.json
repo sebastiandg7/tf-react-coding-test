@@ -31,6 +31,9 @@
       ],
       "@tf-test/shared/util-validators": [
         "libs/shared/util-validators/src/index.ts"
+      ],
+      "@tf-test/shared/util-formatters": [
+        "libs/shared/util-formatters/src/index.ts"
       ]
     }
   },
