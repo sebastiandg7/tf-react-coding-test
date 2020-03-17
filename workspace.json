@@ -200,9 +200,9 @@
         }
       }
     },
-    "react-coding-test-feature-regsiter-form": {
-      "root": "libs/react-coding-test/feature-regsiter-form",
-      "sourceRoot": "libs/react-coding-test/feature-regsiter-form/src",
+    "react-coding-test-feature-register-form": {
+      "root": "libs/react-coding-test/feature-register-form",
+      "sourceRoot": "libs/react-coding-test/feature-register-form/src",
       "projectType": "library",
       "schematics": {},
       "architect": {
@@ -210,22 +210,22 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "config": "libs/react-coding-test/feature-regsiter-form/.eslintrc",
+            "config": "libs/react-coding-test/feature-register-form/.eslintrc",
             "tsConfig": [
-              "libs/react-coding-test/feature-regsiter-form/tsconfig.lib.json",
-              "libs/react-coding-test/feature-regsiter-form/tsconfig.spec.json"
+              "libs/react-coding-test/feature-register-form/tsconfig.lib.json",
+              "libs/react-coding-test/feature-register-form/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/react-coding-test/feature-regsiter-form/**"
+              "!libs/react-coding-test/feature-register-form/**"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/react-coding-test/feature-regsiter-form/jest.config.js",
-            "tsConfig": "libs/react-coding-test/feature-regsiter-form/tsconfig.spec.json",
+            "jestConfig": "libs/react-coding-test/feature-register-form/jest.config.js",
+            "tsConfig": "libs/react-coding-test/feature-register-form/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }

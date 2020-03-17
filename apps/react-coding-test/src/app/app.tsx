@@ -16,7 +16,7 @@ const ReactCodingTestFeatureVotingList = lazy(() =>
 );
 
 const ReactCodingTestFeatureRegsiterForm = lazy(() =>
-  import('@tf-test/react-coding-test/feature-regsiter-form')
+  import('@tf-test/react-coding-test/feature-register-form')
 );
 
 const StyledApp = styled.div`
