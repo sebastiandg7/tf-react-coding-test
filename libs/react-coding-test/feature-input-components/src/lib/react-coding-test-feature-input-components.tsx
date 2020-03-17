@@ -63,7 +63,7 @@ export const ReactCodingTestFeatureInputComponents = (
         <div className="settings-col">
           <div className="setttings-property">
             <label htmlFor="" className="lbl setttings-property-lbl">
-              Input focused
+              Set input focus
             </label>
             <div className="setttings-property-value">
               <ToggleSwitch
