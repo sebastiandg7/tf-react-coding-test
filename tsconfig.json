@@ -34,6 +34,9 @@
       ],
       "@tf-test/shared/util-formatters": [
         "libs/shared/util-formatters/src/index.ts"
+      ],
+      "@tf-test/shared/models-voting-candidates": [
+        "libs/shared/models-voting-candidates/src/index.ts"
       ]
     }
   },

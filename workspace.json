@@ -317,6 +317,37 @@
           }
         }
       }
+    },
+    "shared-models-voting-candidates": {
+      "root": "libs/shared/models-voting-candidates",
+      "sourceRoot": "libs/shared/models-voting-candidates/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/shared/models-voting-candidates/.eslintrc",
+            "tsConfig": [
+              "libs/shared/models-voting-candidates/tsconfig.lib.json",
+              "libs/shared/models-voting-candidates/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/models-voting-candidates/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/models-voting-candidates/jest.config.js",
+            "tsConfig": "libs/shared/models-voting-candidates/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

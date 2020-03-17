@@ -38,6 +38,9 @@
     },
     "shared-util-formatters": {
       "tags": []
+    },
+    "shared-models-voting-candidates": {
+      "tags": []
     }
   }
 }
