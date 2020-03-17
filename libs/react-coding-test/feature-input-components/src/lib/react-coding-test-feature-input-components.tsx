@@ -50,7 +50,7 @@ const StyledReactCodingTestFeatureInputComponents = styled.div`
 export const ReactCodingTestFeatureInputComponents = (
   props: ReactCodingTestFeatureInputComponentsProps
 ) => {
-  const [inputRendered, setInputRendered] = useState(true);
+  const [inputRendered, setInputRendered] = useState(false);
   const [focused, setFocused] = useState(false);
 
   const onFocusedChange = (event: React.ChangeEvent<HTMLInputElement>) => {
