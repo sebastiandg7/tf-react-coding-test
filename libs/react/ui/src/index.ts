@@ -1,3 +1,4 @@
+export * from './lib/forms/toggle-switch/toggle-switch';
 export * from './lib/forms/email-input/email-input';
 export * from './lib/forms/password-input/password-input';
 export * from './lib/forms/text-input/text-input';
