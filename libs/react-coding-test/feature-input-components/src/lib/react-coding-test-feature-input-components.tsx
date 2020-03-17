@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { ToggleSwitch } from '@tf-test/react/ui';
 
 import styled from 'styled-components';
-import FocusableInput from './components/focusble-input/focusable-input';
+import FocusableInput from './components/focusable-input/focusable-input';
 
 /* eslint-disable-next-line */
 export interface ReactCodingTestFeatureInputComponentsProps {}
