@@ -27,7 +27,7 @@ export const NavigationBar = (props: NavigationBarProps) => {
           </NavLink>
         </NavListItem>
         <NavListItem>
-          <NavLink to="/voting-list" activeClassName="active">
+          <NavLink to="/voting-list/7" activeClassName="active">
             Voting List
           </NavLink>
         </NavListItem>
