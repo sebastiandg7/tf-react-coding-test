@@ -230,6 +230,37 @@
           }
         }
       }
+    },
+    "shared-util-voting-candidates": {
+      "root": "libs/shared/util-voting-candidates",
+      "sourceRoot": "libs/shared/util-voting-candidates/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/shared/util-voting-candidates/.eslintrc",
+            "tsConfig": [
+              "libs/shared/util-voting-candidates/tsconfig.lib.json",
+              "libs/shared/util-voting-candidates/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/util-voting-candidates/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/util-voting-candidates/jest.config.js",
+            "tsConfig": "libs/shared/util-voting-candidates/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

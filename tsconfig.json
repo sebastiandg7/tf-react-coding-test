@@ -25,6 +25,9 @@
       ],
       "@tf-test/react-coding-test/feature-register-form": [
         "libs/react-coding-test/feature-register-form/src/index.ts"
+      ],
+      "@tf-test/shared/util-voting-candidates": [
+        "libs/shared/util-voting-candidates/src/index.ts"
       ]
     }
   },
