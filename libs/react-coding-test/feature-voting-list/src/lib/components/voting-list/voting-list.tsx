@@ -2,6 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 import { VotingCandidate } from '@tf-test/shared/models-voting-candidates';
+import VotingListItem from '../voting-list-item/voting-list-item';
 
 /* eslint-disable-next-line */
 export interface VotingListProps {
@@ -17,9 +18,7 @@ export const VotingList = (props: VotingListProps) => {
     <StyledVotingList>
       <ul>
         {props.candidates.map(candidate => (
-          <li key={candidate.id}>
-            <pre>{JSON.stringify(candidate)}</pre>
-          </li>
+          <VotingListItem key={candidate.id} candidate={candidate} />
         ))}
       </ul>
     </StyledVotingList>
