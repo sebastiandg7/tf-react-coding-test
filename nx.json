@@ -44,6 +44,9 @@
     },
     "shared-util-generators": {
       "tags": []
+    },
+    "shared-util-data": {
+      "tags": []
     }
   }
 }
