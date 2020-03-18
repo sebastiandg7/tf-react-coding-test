@@ -1,10 +1,10 @@
 import { NotFound } from '@tf-test/react/ui';
-import { generateRandomInt } from '@tf-test/shared/util-generators';
 import React, { lazy, Suspense } from 'react';
-import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 import Home from './components/home/home';
 import NavigationBar from './components/navigation-bar/navigation-bar';
+import RandomVotingList from './containers/random-voting-list/radom-voting-list';
 import './styles/global-styles.scss';
 
 const ReactCodingTestFeatureInputComponents = lazy(() =>
@@ -39,8 +39,6 @@ const StyledApp = styled.div`
 `;
 
 export const App = () => {
-  const history = useHistory();
-
   return (
     <StyledApp>
       <header>
@@ -68,14 +66,7 @@ export const App = () => {
               exact
               component={ReactCodingTestFeatureRegsiterForm}
             />
-            <Route
-              path="/voting-list"
-              exact
-              render={() => {
-                history.push(`/voting-list/${generateRandomInt(3, 15)}`);
-                return <></>;
-              }}
-            />
+            <Route path="/voting-list" exact component={RandomVotingList} />
             <Route path="/404" exact component={NotFound} />
             <Redirect from="*" to="/404" />
             {/* END: routes */}
