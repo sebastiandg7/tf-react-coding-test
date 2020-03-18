@@ -63,6 +63,10 @@ const StyledVotingListItem = styled.div`
   .btn-vote.btn-disabled:hover {
     cursor: not-allowed;
   }
+
+  .no-select {
+    user-select: none;
+  }
 `;
 
 export const VotingListItem = (props: VotingListItemProps) => {
@@ -73,7 +77,7 @@ export const VotingListItem = (props: VotingListItemProps) => {
 
   return (
     <StyledVotingListItem>
-      <div className="candidate-card">
+      <div className="candidate-card no-select">
         <div className="candidate-info">
           <h2>{`${candidate.firstname} ${candidate.lastname}`}</h2>
           <p className="candidate-slogan">{candidate.slogan}</p>
