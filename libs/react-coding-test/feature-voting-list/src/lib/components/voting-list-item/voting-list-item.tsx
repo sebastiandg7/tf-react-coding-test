@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components';
 import { VotingCandidate } from '@tf-test/shared/models-voting-candidates';
 
@@ -67,9 +67,9 @@ export const VotingListItem = (props: VotingListItemProps) => {
         <div className="candidate-votes">
           <h3>Votes</h3>
           <div className="votes-control">
-            <span className="decrease-votes">-</span>
+            <FontAwesomeIcon icon="arrow-down" color="red"/>
             <span className="candidate-votes-count">{candidate.votes}</span>
-            <span className="increase-votes">+</span>
+            <FontAwesomeIcon icon="arrow-up" color="green"/>
           </div>
         </div>
       </div>
