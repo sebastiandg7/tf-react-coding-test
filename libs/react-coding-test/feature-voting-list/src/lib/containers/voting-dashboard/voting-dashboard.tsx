@@ -13,8 +13,13 @@ import {
 
 import styled from 'styled-components';
 import VotingList from '../../components/voting-list/voting-list';
-import { VotingCandidate } from '@tf-test/shared/models-voting-candidates';
 import VotingStats from '../../components/voting-stats/voting-stats';
+
+import { VotingCandidate } from '@tf-test/shared/models-voting-candidates';
+import {
+  multipleSortArray,
+  MultipleSortParam
+} from '@tf-test/shared/util-data';
 
 /* eslint-disable-next-line */
 export interface VotingDashboardProps {}
@@ -64,11 +69,24 @@ const renderDashboard = (
   const onCandidateDownVote = (candidateId: number) =>
     dispatch(getDecreaseCandidateVotes({ candidateId }));
 
+  const sortCandidatesBy: MultipleSortParam<VotingCandidate>[] = [
+    {
+      property: 'votes',
+      direction: -1
+    },
+    {
+      property: 'age',
+      direction: -1
+    }
+  ];
+  console.log(candidates);
+  console.log(multipleSortArray(candidates, sortCandidatesBy));
+
   return (
     <>
       <VotingStats totalVotes={totalVotes} />
       <VotingList
-        candidates={candidates}
+        candidates={multipleSortArray(candidates, sortCandidatesBy)}
         onCandidateUpVote={onCandidateUpVote}
         onCandidateDownVote={onCandidateDownVote}
       />
