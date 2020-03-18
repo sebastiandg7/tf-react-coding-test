@@ -7,17 +7,23 @@ import VotingListItem from '../voting-list-item/voting-list-item';
 /* eslint-disable-next-line */
 export interface VotingListProps {
   candidates: VotingCandidate[];
+  onCandidateUpVote: (candidateId: number) => void;
+  onCandidateDownVote: (candidateId: number) => void;
 }
 
-const StyledVotingList = styled.div`
-`;
+const StyledVotingList = styled.div``;
 
 export const VotingList = (props: VotingListProps) => {
   return (
     <StyledVotingList>
       <ul>
         {props.candidates.map(candidate => (
-          <VotingListItem key={candidate.id} candidate={candidate} />
+          <VotingListItem
+            key={candidate.id}
+            candidate={candidate}
+            onCandidateUpVote={props.onCandidateUpVote}
+            onCandidateDownVote={props.onCandidateDownVote}
+          />
         ))}
       </ul>
     </StyledVotingList>

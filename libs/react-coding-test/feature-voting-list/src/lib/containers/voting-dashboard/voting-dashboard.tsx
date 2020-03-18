@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Dispatch } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import { LoadingSpinner } from '@tf-test/react/ui';
 import {
   fetchCandidatesList,
+  getIncreaseCandidateVotes,
+  getDecreaseCandidateVotes,
   selectTotalVotes,
   selectVotingListLoaded,
   selectVotingListCandidates
@@ -43,16 +45,33 @@ export const VotingDashboard = (props: VotingDashboardProps) => {
 
   return (
     <StyledVotingDashboard>
-      {loaded ? renderDashboard(candidates, totalVotes) : <LoadingSpinner />}
+      {loaded ? (
+        renderDashboard(candidates, totalVotes, dispatch)
+      ) : (
+        <LoadingSpinner />
+      )}
     </StyledVotingDashboard>
   );
 };
 
-const renderDashboard = (candidates: VotingCandidate[], totalVotes: number) => {
+const renderDashboard = (
+  candidates: VotingCandidate[],
+  totalVotes: number,
+  dispatch: Dispatch<any>
+) => {
+  const onCandidateUpVote = (candidateId: number) =>
+    dispatch(getIncreaseCandidateVotes({ candidateId }));
+  const onCandidateDownVote = (candidateId: number) =>
+    dispatch(getDecreaseCandidateVotes({ candidateId }));
+
   return (
     <>
       <VotingStats totalVotes={totalVotes} />
-      <VotingList candidates={candidates} />
+      <VotingList
+        candidates={candidates}
+        onCandidateUpVote={onCandidateUpVote}
+        onCandidateDownVote={onCandidateDownVote}
+      />
     </>
   );
 };

@@ -6,6 +6,8 @@ import { VotingCandidate } from '@tf-test/shared/models-voting-candidates';
 /* eslint-disable-next-line */
 export interface VotingListItemProps {
   candidate: VotingCandidate;
+  onCandidateUpVote: (candidateId: number) => void;
+  onCandidateDownVote: (candidateId: number) => void;
 }
 
 const StyledVotingListItem = styled.div`
@@ -65,6 +67,10 @@ const StyledVotingListItem = styled.div`
 
 export const VotingListItem = (props: VotingListItemProps) => {
   const { candidate } = props;
+
+  const candidateCanDownVote = canDownVote(candidate);
+  const candidateCanUpVote = canUpVote(candidate);
+
   return (
     <StyledVotingListItem>
       <div className="candidate-card">
@@ -78,18 +84,26 @@ export const VotingListItem = (props: VotingListItemProps) => {
           <div className="votes-control">
             <FontAwesomeIcon
               className={`btn-vote ${
-                canDownVote(candidate) ? '' : 'btn-disabled'
+                candidateCanDownVote ? '' : 'btn-disabled'
               }`}
               icon="arrow-down"
-              color={canDownVote(candidate) ? 'red' : 'gray'}
+              color={candidateCanDownVote ? 'red' : 'gray'}
+              onClick={() => {
+                if (candidateCanDownVote) {
+                  props.onCandidateDownVote(candidate.id);
+                }
+              }}
             />
             <span className="candidate-votes-count">{candidate.votes}</span>
             <FontAwesomeIcon
-              className={`btn-vote ${
-                canUpVote(candidate) ? '' : 'btn-disabled'
-              }`}
+              className={`btn-vote ${candidateCanUpVote ? '' : 'btn-disabled'}`}
               icon="arrow-up"
-              color={canUpVote(candidate) ? 'green' : 'gray'}
+              color={candidateCanUpVote ? 'green' : 'gray'}
+              onClick={() => {
+                if (candidateCanUpVote) {
+                  props.onCandidateUpVote(candidate.id);
+                }
+              }}
             />
           </div>
         </div>
