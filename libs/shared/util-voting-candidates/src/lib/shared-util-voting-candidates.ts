@@ -1,10 +1,10 @@
 import { VotingCandidate } from '@tf-test/shared/models-voting-candidates';
 import {
-  FakeDataGenerator,
-  generateRandomInt
+  generateRandomInt,
+  generateSentence,
+  generateFirstname,
+  generateLastname
 } from '@tf-test/shared/util-generators';
-
-FakeDataGenerator.setLocale('es');
 
 export const generateCandidates = (
   candidatesAmount: number
@@ -12,9 +12,9 @@ export const generateCandidates = (
   Array.from({ length: candidatesAmount }, () => generateCandidate());
 
 const generateCandidate = (): VotingCandidate => ({
-  firstname: FakeDataGenerator.generateFirstname(),
-  lastname: FakeDataGenerator.generateLastname(),
+  firstname: generateFirstname(),
+  lastname: generateLastname(),
   age: generateRandomInt(18, 100),
-  slogan: FakeDataGenerator.generateSentence(10),
+  slogan: generateSentence(10),
   votes: generateRandomInt(0, 20)
 });

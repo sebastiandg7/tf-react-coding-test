@@ -1,6 +1,8 @@
-import * as faker from 'faker';
+import * as faker from 'faker/locale/es';
 
-export const setLocale = (locale: string) => faker.setLocale(locale);
+export const setLocale = (locale: string) => {
+  faker.setLocale(locale)
+};
 
 export const generateFullname = () => faker.name.findName();
 
