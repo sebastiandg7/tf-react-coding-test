@@ -10,11 +10,18 @@ import {
 } from '../../store';
 
 import styled from 'styled-components';
+import VotingList from '../../components/voting-list/voting-list';
+import { VotingCandidate } from '@tf-test/shared/models-voting-candidates';
+
 /* eslint-disable-next-line */
 export interface VotingDashboardProps {}
 
 const StyledVotingDashboard = styled.div`
   color: black;
+
+  h1 {
+    font-size: 1.5rem;
+  }
 `;
 
 export const useTotalVotes = () => useSelector(selectTotalVotes);
@@ -33,18 +40,19 @@ export const VotingDashboard = (props: VotingDashboardProps) => {
     dispatch(fetchCandidatesList(Number(candidatesAmount)));
   }, []);
 
-  const renderDashboard = () => {
-    return (
-      <>
-        <h1>{loaded ? `Total votes: ${totalVotes}` : 'Loading...'}</h1>
-      </>
-    );
-  };
-
   return (
     <StyledVotingDashboard>
-      {loaded ? renderDashboard() : <LoadingSpinner />}
+      {loaded ? renderDashboard(candidates, totalVotes) : <LoadingSpinner />}
     </StyledVotingDashboard>
+  );
+};
+
+const renderDashboard = (candidates: VotingCandidate[], totalVotes: number) => {
+  return (
+    <>
+      <h1>{`Total votes: ${totalVotes}`}</h1>
+      <VotingList candidates={candidates} />
+    </>
   );
 };
 
