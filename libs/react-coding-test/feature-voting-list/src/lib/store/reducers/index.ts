@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { getVotingListStart, getVotingListSuccess } from '../actions';
+import { getVotingListStart, getVotingListSuccess, getVotingListFailure } from '../actions';
 import { VotingCandidate } from '@tf-test/shared/models-voting-candidates';
 
 const initialState: VotingCandidate[] = [];
@@ -13,6 +13,14 @@ export const candidatesReducer = createReducer(initialState, builder => {
 
 export const loadedReducer = createReducer(false, builder => {
   builder.addCase(getVotingListStart, (state: boolean, action) => {
-    console.log(`It works... Loaded`);
+    return false;
+  });
+
+  builder.addCase(getVotingListSuccess, (state: boolean, action) => {
+    return true;
+  });
+
+  builder.addCase(getVotingListFailure, (state: boolean, action) => {
+    return true;
   });
 });
