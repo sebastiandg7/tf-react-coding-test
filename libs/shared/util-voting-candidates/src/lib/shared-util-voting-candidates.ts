@@ -9,9 +9,12 @@ import {
 export const generateCandidates = (
   candidatesAmount: number
 ): VotingCandidate[] =>
-  Array.from({ length: candidatesAmount }, () => generateCandidate());
+  Array.from({ length: candidatesAmount }, (_, index) =>
+    generateCandidate(index)
+  );
 
-const generateCandidate = (): VotingCandidate => ({
+const generateCandidate = (candidateId: number): VotingCandidate => ({
+  id: candidateId,
   firstname: generateFirstname(),
   lastname: generateLastname(),
   age: generateRandomInt(18, 100),
