@@ -17,7 +17,7 @@ export const getVotingListState = (rootState: any): IVotingListState =>
 
 export const selectVotingListCandidates = createSelector(
   getVotingListState,
-  s => s?.candidates
+  s => s.candidates
 );
 
 export const selectVotingListLoaded = createSelector(
@@ -33,7 +33,7 @@ export const selectVotingListError = createSelector(
 export const selectTotalVotes = createSelector(
   selectVotingListCandidates,
   candidates =>
-    candidates?.reduce(
+    candidates.reduce(
       (accumulated, currentCandidate) => accumulated + currentCandidate.votes,
       0
     )
