@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.1](https://github.com/sebastiandg7/tf-react-coding-test/compare/v0.0.0...v0.0.1) (2020-03-18)
+
+
+### Features
+
+* **coing-list:** disable text selection ([9d53d06](https://github.com/sebastiandg7/tf-react-coding-test/commit/9d53d0668bbd099848aa5f49cc8af925934a4f82))
+* **voting-list:** add basic candidate list styling ([afc7e58](https://github.com/sebastiandg7/tf-react-coding-test/commit/afc7e58716204ec56b1e94d48d1f5b48c13281de))
+* **voting-list:** add render voting items as separte components ([0126eb6](https://github.com/sebastiandg7/tf-react-coding-test/commit/0126eb69caa1285651b8de2dff727ee5679be6d7))
+* **voting-list:** add total votes selector ([f2ca201](https://github.com/sebastiandg7/tf-react-coding-test/commit/f2ca201ccb25ecdba95c0e48008bf3dc15a8aabd))
+* **voting-list:** add up/down vote icons ([aba7b76](https://github.com/sebastiandg7/tf-react-coding-test/commit/aba7b76feac1cb6a405cf3062129d306fe42fe1c))
+* **voting-list:** add voting dashboard container ([e775c6f](https://github.com/sebastiandg7/tf-react-coding-test/commit/e775c6f5661503741143eb26a7f4bccb83406344))
+* **voting-list:** display total votes count ([1351d0f](https://github.com/sebastiandg7/tf-react-coding-test/commit/1351d0f545228d64b2d3101a3e1016355477571a))
+* **voting-list:** display votation stats ([2ceebf3](https://github.com/sebastiandg7/tf-react-coding-test/commit/2ceebf38063101c513eed43044de07b6a74be492))
+* **voting-list:** handle up/down vote events ([8933d86](https://github.com/sebastiandg7/tf-react-coding-test/commit/8933d86c8384d0a8d9c47d22b579de14897ebeca))
+* **voting-list:** highlight last voted candidate ([3426863](https://github.com/sebastiandg7/tf-react-coding-test/commit/3426863626070027f2f16676e158517564ac3d34))
+* **voting-list:** improve candidate card styling ([4012a2a](https://github.com/sebastiandg7/tf-react-coding-test/commit/4012a2a71afdb36865be5ce088f091d11c480a8f))
+* **voting-list:** modify loaded state on candidates generation ([aa2c6ac](https://github.com/sebastiandg7/tf-react-coding-test/commit/aa2c6ac7bb93b4a505cbc29179ae34499143aa12))
+* **voting-list:** order list desc by votes and age ([72c1b20](https://github.com/sebastiandg7/tf-react-coding-test/commit/72c1b20e360533c4f3fbbd0cc37e73e66992636a))
+* **workspace:** add data util lib ([fd19f3b](https://github.com/sebastiandg7/tf-react-coding-test/commit/fd19f3b314a15bc68817d16a875ead0030eef708))
+
+
+### Bug Fixes
+
+* **coding-test:** add loading spinner on fallbacks ([46e12b6](https://github.com/sebastiandg7/tf-react-coding-test/commit/46e12b6f7c6b1645705e9e1c29afc637e67e18e1))
+* **coding-test:** fix voting list random url redirect update ([65b171f](https://github.com/sebastiandg7/tf-react-coding-test/commit/65b171fae373d9c0beceaafce26d6ae4740e8ffa))
+* **coding-test:** navigate to random url in voting-list nav link ([4258412](https://github.com/sebastiandg7/tf-react-coding-test/commit/4258412d2d3d265d42c5a059531ddca6c35893c2))
+* **util-data:** fix multiple sort property comparison for numbers ([19f559b](https://github.com/sebastiandg7/tf-react-coding-test/commit/19f559b02d4c30e4eb2af241d7596a950fd13477))
+* **voting-list:** remove unnecessary null checks ([cdc7e42](https://github.com/sebastiandg7/tf-react-coding-test/commit/cdc7e42082911f6bac32452d40a3925ebc885104))
+
 ## 0.0.0 (2020-03-18)
 
 
