@@ -1,5 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 import { VotingCandidate } from '@tf-test/shared/models-voting-candidates';
 
@@ -20,6 +20,7 @@ const StyledVotingListItem = styled.div`
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
     display: flex;
     justify-content: space-between;
+    margin: 5px 0;
     padding: 0.5em 0em 0.5em 1em;
     border-radius: 4px;
   }
@@ -52,6 +53,14 @@ const StyledVotingListItem = styled.div`
   .candidate-votes-count {
     margin: 0 1em;
   }
+
+  .btn-vote:hover {
+    cursor: pointer;
+  }
+
+  .btn-vote.btn-disabled:hover {
+    cursor: not-allowed;
+  }
 `;
 
 export const VotingListItem = (props: VotingListItemProps) => {
@@ -67,14 +76,29 @@ export const VotingListItem = (props: VotingListItemProps) => {
         <div className="candidate-votes">
           <h3>Votes</h3>
           <div className="votes-control">
-            <FontAwesomeIcon icon="arrow-down" color="red"/>
+            <FontAwesomeIcon
+              className={`btn-vote ${
+                canDownVote(candidate) ? '' : 'btn-disabled'
+              }`}
+              icon="arrow-down"
+              color={canDownVote(candidate) ? 'red' : 'gray'}
+            />
             <span className="candidate-votes-count">{candidate.votes}</span>
-            <FontAwesomeIcon icon="arrow-up" color="green"/>
+            <FontAwesomeIcon
+              className={`btn-vote ${
+                canUpVote(candidate) ? '' : 'btn-disabled'
+              }`}
+              icon="arrow-up"
+              color={canUpVote(candidate) ? 'green' : 'gray'}
+            />
           </div>
         </div>
       </div>
     </StyledVotingListItem>
   );
 };
+
+const canUpVote = (candidate: VotingCandidate) => candidate.votes < 20;
+const canDownVote = (candidate: VotingCandidate) => candidate.votes > 0;
 
 export default VotingListItem;
