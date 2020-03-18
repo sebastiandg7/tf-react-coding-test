@@ -1,12 +1,13 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { getVotingListStart } from '../actions';
-import { VotingListEntity } from '../votin-list.module.contract';
+import { getVotingListStart, getVotingListSuccess } from '../actions';
+import { VotingCandidate } from '@tf-test/shared/models-voting-candidates';
 
-const initialState: VotingListEntity[] = [];
+const initialState: VotingCandidate[] = [];
 
-export const entitiesReducer = createReducer(initialState, builder => {
-  builder.addCase(getVotingListStart, (state: VotingListEntity[], action) => {
-    console.log(`It works... Name: ${action.payload.name}`);
+export const candidatesReducer = createReducer(initialState, builder => {
+  builder.addCase(getVotingListSuccess, (state: VotingCandidate[], action) => {
+    const { candidates } = action.payload;
+    return candidates;
   });
 });
 

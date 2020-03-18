@@ -15,9 +15,9 @@ import { IVotingListState } from '../votin-list.module.contract';
 export const getVotingListState = (rootState: any): IVotingListState =>
   rootState[VOTING_LIST_FEATURE_KEY];
 
-export const selectVotingListEntities = createSelector(
+export const selectVotingListCandidates = createSelector(
   getVotingListState,
-  s => s.entities
+  s => s.candidates
 );
 
 export const selectVotingListLoaded = createSelector(

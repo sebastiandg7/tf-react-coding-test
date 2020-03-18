@@ -1,4 +1,5 @@
 import { createAction } from '@reduxjs/toolkit';
+import { VotingCandidate } from '@tf-test/shared/models-voting-candidates';
 
 /*
  * Export action creators to be dispatched. For use with the `useDispatch` hook.
@@ -12,14 +13,11 @@ import { createAction } from '@reduxjs/toolkit';
  * See: https://react-redux.js.org/next/api/hooks#usedispatch
  */
 
-export const getVotingListStart = createAction(
-  '[Voting List] Start',
-  (payload: { name: string }) => ({ payload })
-);
+export const getVotingListStart = createAction('[Voting List] Start');
 
 export const getVotingListSuccess = createAction(
   '[Voting List] Success',
-  (payload: any[]) => ({ payload })
+  (payload: { candidates: VotingCandidate[] }) => ({ payload })
 );
 export const getVotingListFailure = createAction(
   '[Voting List] Failure',

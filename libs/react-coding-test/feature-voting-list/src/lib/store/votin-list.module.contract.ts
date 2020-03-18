@@ -1,13 +1,10 @@
 import { VOTING_LIST_FEATURE_KEY } from './voting-list.module';
+import { VotingCandidate } from '@tf-test/shared/models-voting-candidates';
 
 export type VotingListError = any;
 
-export interface VotingListEntity {
-  id: number;
-}
-
 export interface IVotingListState {
-  entities: VotingListEntity[];
+  candidates: VotingCandidate[];
   loaded: boolean;
   error: VotingListError;
 }
