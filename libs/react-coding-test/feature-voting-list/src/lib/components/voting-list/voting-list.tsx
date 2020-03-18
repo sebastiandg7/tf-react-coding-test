@@ -10,7 +10,6 @@ export interface VotingListProps {
 }
 
 const StyledVotingList = styled.div`
-  color: black;
 `;
 
 export const VotingList = (props: VotingListProps) => {
