@@ -38,6 +38,7 @@
     "react-redux": "7.1.3",
     "react-router-dom": "5.1.2",
     "redux-dynamic-modules": "^5.2.0",
+    "redux-dynamic-modules-thunk": "^5.2.0",
     "styled-components": "5.0.0"
   },
   "devDependencies": {
