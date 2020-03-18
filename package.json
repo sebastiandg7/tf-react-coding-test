@@ -28,9 +28,11 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "1.1.0",
+    "@types/faker": "^4.1.10",
     "@types/react-redux": "7.1.5",
     "destyle.css": "^1.0.11",
     "document-register-element": "1.13.1",
+    "faker": "^4.1.0",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-redux": "7.1.3",
