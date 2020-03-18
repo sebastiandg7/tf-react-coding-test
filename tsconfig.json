@@ -37,6 +37,9 @@
       ],
       "@tf-test/shared/models-voting-candidates": [
         "libs/shared/models-voting-candidates/src/index.ts"
+      ],
+      "@tf-test/shared/util-generators": [
+        "libs/shared/util-generators/src/index.ts"
       ]
     }
   },

@@ -348,6 +348,34 @@
           }
         }
       }
+    },
+    "shared-util-generators": {
+      "root": "libs/shared/util-generators",
+      "sourceRoot": "libs/shared/util-generators/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/shared/util-generators/.eslintrc",
+            "tsConfig": [
+              "libs/shared/util-generators/tsconfig.lib.json",
+              "libs/shared/util-generators/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/util-generators/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/util-generators/jest.config.js",
+            "tsConfig": "libs/shared/util-generators/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
