@@ -1,8 +1,6 @@
+import { NavBar, NavList, NavListItem, NavLogo } from '@tf-test/react/ui';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
-import { NavBar, NavList, NavListItem, NavLogo } from '@tf-test/react/ui';
-
 import { ReactComponent as ReactLogo } from '../../react-logo.svg';
 
 /* eslint-disable-next-line */
@@ -27,7 +25,7 @@ export const NavigationBar = (props: NavigationBarProps) => {
           </NavLink>
         </NavListItem>
         <NavListItem>
-          <NavLink to="/voting-list/7" activeClassName="active">
+          <NavLink to="/voting-list" activeClassName="active">
             Voting List
           </NavLink>
         </NavListItem>
