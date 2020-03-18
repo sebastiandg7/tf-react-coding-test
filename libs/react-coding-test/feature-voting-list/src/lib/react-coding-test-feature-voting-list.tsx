@@ -3,6 +3,8 @@ import { DynamicModuleLoader } from 'redux-dynamic-modules';
 import VotingDashboard from './containers/voting-dashboard/voting-dashboard';
 import { getVotingListModule } from './store';
 
+import './fontawesome-icons';
+
 /* eslint-disable-next-line */
 export interface ReactCodingTestFeatureVotingListProps {}
 
