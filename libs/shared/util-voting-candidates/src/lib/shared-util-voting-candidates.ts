@@ -10,7 +10,7 @@ export const generateCandidates = (
   candidatesAmount: number
 ): VotingCandidate[] =>
   Array.from({ length: candidatesAmount }, (_, index) =>
-    generateCandidate(index)
+    generateCandidate(index + 1)
   );
 
 const generateCandidate = (candidateId: number): VotingCandidate => ({
