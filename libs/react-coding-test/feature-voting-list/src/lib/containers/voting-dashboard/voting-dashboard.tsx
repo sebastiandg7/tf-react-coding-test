@@ -12,6 +12,7 @@ import {
 import styled from 'styled-components';
 import VotingList from '../../components/voting-list/voting-list';
 import { VotingCandidate } from '@tf-test/shared/models-voting-candidates';
+import VotingStats from '../../components/voting-stats/voting-stats';
 
 /* eslint-disable-next-line */
 export interface VotingDashboardProps {}
@@ -50,7 +51,7 @@ export const VotingDashboard = (props: VotingDashboardProps) => {
 const renderDashboard = (candidates: VotingCandidate[], totalVotes: number) => {
   return (
     <>
-      <h1>{`Total votes: ${totalVotes}`}</h1>
+      <VotingStats totalVotes={totalVotes} />
       <VotingList candidates={candidates} />
     </>
   );

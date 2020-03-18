@@ -1,3 +1,4 @@
+export * from './lib/components/voting-stats/voting-stats';
 export * from './lib/components/voting-list/voting-list';
 export * from './lib/containers/voting-dashboard/voting-dashboard';
 export * from './lib/store/voting-list.module';
