@@ -1,25 +1,24 @@
-import React, { useEffect, Dispatch } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router';
 import { LoadingSpinner } from '@tf-test/react/ui';
-import {
-  fetchCandidatesList,
-  getIncreaseCandidateVotes,
-  getDecreaseCandidateVotes,
-  selectTotalVotes,
-  selectVotingListLoaded,
-  selectVotingListCandidates
-} from '../../store';
-
-import styled from 'styled-components';
-import VotingList from '../../components/voting-list/voting-list';
-import VotingStats from '../../components/voting-stats/voting-stats';
-
 import { VotingCandidate } from '@tf-test/shared/models-voting-candidates';
 import {
   multipleSortArray,
   MultipleSortParam
 } from '@tf-test/shared/util-data';
+import React, { Dispatch, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router';
+import styled from 'styled-components';
+import VotingList from '../../components/voting-list/voting-list';
+import VotingStats from '../../components/voting-stats/voting-stats';
+import {
+  fetchCandidatesList,
+  getDecreaseCandidateVotes,
+  getIncreaseCandidateVotes,
+  selectLastVotedCandidate,
+  selectTotalVotes,
+  selectVotingListCandidates,
+  selectVotingListLoaded
+} from '../../store';
 
 /* eslint-disable-next-line */
 export interface VotingDashboardProps {}
@@ -34,6 +33,8 @@ const StyledVotingDashboard = styled.div`
 
 export const useTotalVotes = () => useSelector(selectTotalVotes);
 export const useCandidates = () => useSelector(selectVotingListCandidates);
+export const useLastVotedCandidateId = () =>
+  useSelector(selectLastVotedCandidate);
 export const useCandidatesLoaded = () => useSelector(selectVotingListLoaded);
 
 export const VotingDashboard = (props: VotingDashboardProps) => {
@@ -41,6 +42,7 @@ export const VotingDashboard = (props: VotingDashboardProps) => {
   const dispatch = useDispatch();
 
   const candidates = useCandidates();
+  const lastVotedCandidateId = useLastVotedCandidateId();
   const totalVotes = useTotalVotes();
   const loaded = useCandidatesLoaded();
 
@@ -51,7 +53,7 @@ export const VotingDashboard = (props: VotingDashboardProps) => {
   return (
     <StyledVotingDashboard>
       {loaded ? (
-        renderDashboard(candidates, totalVotes, dispatch)
+        renderDashboard(candidates, lastVotedCandidateId, totalVotes, dispatch)
       ) : (
         <LoadingSpinner />
       )}
@@ -61,6 +63,7 @@ export const VotingDashboard = (props: VotingDashboardProps) => {
 
 const renderDashboard = (
   candidates: VotingCandidate[],
+  lastVotedCandidateId: number,
   totalVotes: number,
   dispatch: Dispatch<any>
 ) => {
@@ -84,6 +87,7 @@ const renderDashboard = (
     <>
       <VotingStats totalVotes={totalVotes} />
       <VotingList
+        lastVotedCandidateId={lastVotedCandidateId}
         candidates={multipleSortArray(candidates, sortCandidatesBy)}
         onCandidateUpVote={onCandidateUpVote}
         onCandidateDownVote={onCandidateDownVote}

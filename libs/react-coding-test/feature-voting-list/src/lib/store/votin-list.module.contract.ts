@@ -5,6 +5,7 @@ export type VotingListError = any;
 
 export interface IVotingListState {
   candidates: VotingCandidate[];
+  lastVotedCantidateId: number;
   loaded: boolean;
   error: VotingListError;
 }

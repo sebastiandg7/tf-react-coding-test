@@ -6,6 +6,7 @@ import { VotingCandidate } from '@tf-test/shared/models-voting-candidates';
 /* eslint-disable-next-line */
 export interface VotingListItemProps {
   candidate: VotingCandidate;
+  isLastVoted: boolean;
   onCandidateUpVote: (candidateId: number) => void;
   onCandidateDownVote: (candidateId: number) => void;
 }
@@ -25,6 +26,10 @@ const StyledVotingListItem = styled.div`
     margin: 5px 0;
     padding: 0.5em 0em 0.5em 1em;
     border-radius: 4px;
+  }
+
+  .candidate-card.last-voted {
+    background-color: bisque;
   }
 
   .candidate-info {
@@ -77,7 +82,7 @@ export const VotingListItem = (props: VotingListItemProps) => {
 
   return (
     <StyledVotingListItem>
-      <div className="candidate-card no-select">
+      <div className={`candidate-card no-select ${props.isLastVoted ? 'last-voted':''}`}>
         <div className="candidate-info">
           <h2>{`${candidate.firstname} ${candidate.lastname}`}</h2>
           <p className="candidate-slogan">{candidate.slogan}</p>

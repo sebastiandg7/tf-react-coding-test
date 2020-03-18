@@ -7,6 +7,7 @@ import VotingListItem from '../voting-list-item/voting-list-item';
 /* eslint-disable-next-line */
 export interface VotingListProps {
   candidates: VotingCandidate[];
+  lastVotedCandidateId: number;
   onCandidateUpVote: (candidateId: number) => void;
   onCandidateDownVote: (candidateId: number) => void;
 }
@@ -20,6 +21,7 @@ export const VotingList = (props: VotingListProps) => {
         {props.candidates.map(candidate => (
           <VotingListItem
             key={candidate.id}
+            isLastVoted={props.lastVotedCandidateId === candidate.id}
             candidate={candidate}
             onCandidateUpVote={props.onCandidateUpVote}
             onCandidateDownVote={props.onCandidateDownVote}

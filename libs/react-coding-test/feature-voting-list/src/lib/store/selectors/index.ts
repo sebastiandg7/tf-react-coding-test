@@ -20,6 +20,11 @@ export const selectVotingListCandidates = createSelector(
   s => s.candidates
 );
 
+export const selectLastVotedCandidate = createSelector(
+  getVotingListState,
+  s => s.lastVotedCantidateId
+);
+
 export const selectVotingListLoaded = createSelector(
   getVotingListState,
   s => s.loaded

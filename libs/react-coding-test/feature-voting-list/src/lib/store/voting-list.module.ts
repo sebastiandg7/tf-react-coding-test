@@ -1,6 +1,6 @@
 import { combineReducers } from '@reduxjs/toolkit';
 import { IModule } from 'redux-dynamic-modules';
-import { candidatesReducer, loadedReducer } from './reducers';
+import { candidatesReducer, loadedReducer, lastCandidateReducer } from './reducers';
 import { IVotingListAwareState } from './votin-list.module.contract';
 
 export const VOTING_LIST_FEATURE_KEY = 'votingList';
@@ -11,6 +11,7 @@ export function getVotingListModule(): IModule<IVotingListAwareState> {
     reducerMap: {
       [VOTING_LIST_FEATURE_KEY]: combineReducers({
         candidates: candidatesReducer,
+        lastVotedCantidateId: lastCandidateReducer,
         loaded: loadedReducer,
         error: null
       })
