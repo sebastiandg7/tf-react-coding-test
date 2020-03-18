@@ -1,4 +1,4 @@
-import { NotFound } from '@tf-test/react/ui';
+import { NotFound, LoadingSpinner } from '@tf-test/react/ui';
 import React, { lazy, Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
@@ -48,7 +48,7 @@ export const App = () => {
         {/* START: routes */}
         {/* These routes and navigation have been generated for you */}
         {/* Feel free to move and update them to fit your needs */}
-        <Suspense fallback={<span>Loading...</span>}>
+        <Suspense fallback={<LoadingSpinner />}>
           <Switch>
             <Route path="/" exact render={Home} />
             <Route
