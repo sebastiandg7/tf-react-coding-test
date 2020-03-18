@@ -79,8 +79,6 @@ const renderDashboard = (
       direction: -1
     }
   ];
-  console.log(candidates);
-  console.log(multipleSortArray(candidates, sortCandidatesBy));
 
   return (
     <>
