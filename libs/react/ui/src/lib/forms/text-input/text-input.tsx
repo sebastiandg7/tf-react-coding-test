@@ -3,9 +3,7 @@ import React, { useRef } from 'react';
 import styled from 'styled-components';
 
 /* eslint-disable-next-line */
-export interface TextInputProps {
-  placeHolder?: string;
-}
+export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {}
 
 const StyledTextInput = styled.div`
   .txt-input {
@@ -29,8 +27,8 @@ export const TextInput = React.forwardRef(
           type="text"
           className="txt-input"
           id="name"
-          placeholder={props.placeHolder ? props.placeHolder : ''}
           required={true}
+          {...props}
         />
       </StyledTextInput>
     );
