@@ -6,7 +6,7 @@ import ScaleLoader from 'react-spinners/ScaleLoader';
 export interface LoadingSpinnerProps {}
 
 const StyledLoadingSpinner = styled.div`
-  height: 25vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

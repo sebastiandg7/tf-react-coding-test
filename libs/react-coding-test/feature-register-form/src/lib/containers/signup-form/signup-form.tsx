@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextInput } from '@tf-test/react/ui';
+import { TextInput, LoadingSpinner } from '@tf-test/react/ui';
 
 import styled from 'styled-components';
 
@@ -7,8 +7,6 @@ import styled from 'styled-components';
 export interface SignupFormProps {}
 
 const StyledSignupForm = styled.div`
-  
-
   .lbl-input {
     display: table;
     margin: 2em auto 0;
@@ -31,6 +29,10 @@ const StyledSignupForm = styled.div`
 
   .btn.gray {
     background: #757575;
+  }
+
+  .loading-spinner {
+    height: auto;
   }
 `;
 
@@ -65,9 +67,8 @@ export const SignupForm = (props: SignupFormProps) => {
           placeholder="(123) 456 78 90"
         />
 
-        <div className="input-controls">
-          <button className={`btn`}>Signup</button>
-        </div>
+        <button className={`btn`}>Signup</button>
+        <LoadingSpinner />
       </form>
     </StyledSignupForm>
   );
