@@ -17,7 +17,8 @@
             "tsConfig": "apps/react-coding-test/tsconfig.app.json",
             "assets": [
               "apps/react-coding-test/src/favicon.ico",
-              "apps/react-coding-test/src/assets"
+              "apps/react-coding-test/src/assets",
+              "apps/react-coding-test/src/404.html"
             ],
             "styles": [],
             "scripts": [],
