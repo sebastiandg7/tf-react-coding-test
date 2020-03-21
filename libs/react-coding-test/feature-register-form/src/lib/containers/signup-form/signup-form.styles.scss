@@ -1,0 +1,27 @@
+.lbl-input {
+  display: table;
+  margin: 2em auto 0;
+}
+
+.txt-input {
+  margin: 5px auto 0;
+}
+
+.btn {
+  display: block;
+  background: #143055;
+  color: #fff;
+  padding: 0.6em 1.2em;
+  min-width: 8.62em;
+  text-align: center;
+  border-radius: 5px;
+  margin: 3.5em auto 0;
+}
+
+.btn.gray {
+  background: #757575;
+}
+
+.loading-spinner {
+  height: auto;
+}
