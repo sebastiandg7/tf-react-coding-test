@@ -1,7 +1,5 @@
 import React from 'react';
-import { DynamicModuleLoader } from 'redux-dynamic-modules';
 import SignupForm from './containers/signup-form/signup-form';
-import { getRegisterFormModule } from './store';
 
 /* eslint-disable-next-line */
 export interface ReactCodingTestFeatureRegisterFormProps {}
@@ -13,11 +11,7 @@ export const ReactCodingTestFeatureRegisterForm = (
     console.log('Form submitted :)', values);
   };
 
-  return (
-    <DynamicModuleLoader modules={[getRegisterFormModule()]}>
-      <SignupForm onSubmit={onSignup} />
-    </DynamicModuleLoader>
-  );
+  return <SignupForm />;
 };
 
 export default ReactCodingTestFeatureRegisterForm;
