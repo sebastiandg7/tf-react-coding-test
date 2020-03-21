@@ -2,9 +2,10 @@ import React from 'react';
 import { TextInput, LoadingSpinner } from '@tf-test/react/ui';
 
 import styled from 'styled-components';
+import { reduxForm, Field, InjectedFormProps } from 'redux-form';
 
 /* eslint-disable-next-line */
-export interface SignupFormProps {}
+export interface SignupFormProps extends InjectedFormProps {}
 
 const StyledSignupForm = styled.div`
   .lbl-input {
@@ -37,34 +38,42 @@ const StyledSignupForm = styled.div`
 `;
 
 export const SignupForm = (props: SignupFormProps) => {
+  const { handleSubmit } = props;
+
   return (
     <StyledSignupForm>
-      <form className="signup-form" action="">
+      <form className="signup-form" onSubmit={handleSubmit}>
         <label className="lbl-input" htmlFor="username">
           Username
         </label>
-        <TextInput
+        <Field
+          id="signup-username"
           className="txt-input"
           name="username"
           placeholder="Username"
+          component={TextInput}
         />
         <label className="lbl-input" htmlFor="password">
           Password
         </label>
-        <TextInput
+        <Field
+          id="signup-password"
           className="txt-input"
           name="password"
           type="password"
           placeholder="Password"
+          component={TextInput}
         />
         <label className="lbl-input" htmlFor="phone">
           Phone Number
         </label>
-        <TextInput
+        <Field
+          id="signup-phone"
           className="txt-input"
           name="phone"
           type="phone"
           placeholder="(123) 456 78 90"
+          component={TextInput}
         />
 
         <button className={`btn`}>Signup</button>
@@ -74,4 +83,4 @@ export const SignupForm = (props: SignupFormProps) => {
   );
 };
 
-export default SignupForm;
+export default reduxForm({ form: 'signupForm' })(SignupForm);

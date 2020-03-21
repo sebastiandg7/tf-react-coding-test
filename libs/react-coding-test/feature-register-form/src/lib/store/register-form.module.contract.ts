@@ -1,13 +1,10 @@
 import { REGISTER_FORM_FEATURE_KEY } from './register-form.module';
+import { FormStateMap } from 'redux-form';
 
 export type RegisterFormError = any;
 
-export interface RegisterFormEntity {
-  id: number;
-}
-
 export interface IRegisterFormState {
-  entities: RegisterFormEntity[];
+  form: FormStateMap;
   loaded: boolean;
   error: RegisterFormError;
 }
