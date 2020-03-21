@@ -11,9 +11,7 @@ export function getRegisterFormModule(): IModule<IRegisterFormAwareState> {
     id: REGISTER_FORM_FEATURE_KEY,
     reducerMap: {
       [REGISTER_FORM_FEATURE_KEY]: combineReducers({
-        form: formReducer,
-        loaded: loadedReducer,
-        error: null
+        form: formReducer
       })
     }
     // Actions to fire when this module is added/removed

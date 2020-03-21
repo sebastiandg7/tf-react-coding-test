@@ -1,10 +1,7 @@
 import React from 'react';
 import { DynamicModuleLoader } from 'redux-dynamic-modules';
-import SignupForm, {
-  SignupFormProps
-} from './containers/signup-form/signup-form';
+import SignupForm from './containers/signup-form/signup-form';
 import { getRegisterFormModule } from './store';
-import { Dispatch } from '@reduxjs/toolkit';
 
 /* eslint-disable-next-line */
 export interface ReactCodingTestFeatureRegisterFormProps {}

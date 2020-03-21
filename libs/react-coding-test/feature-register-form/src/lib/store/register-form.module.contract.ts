@@ -5,8 +5,6 @@ export type RegisterFormError = any;
 
 export interface IRegisterFormState {
   form: FormStateMap;
-  loaded: boolean;
-  error: RegisterFormError;
 }
 
 export interface IRegisterFormAwareState {

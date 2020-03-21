@@ -3,6 +3,7 @@ import { TextInput, LoadingSpinner } from '@tf-test/react/ui';
 import { reduxForm, Field, InjectedFormProps } from 'redux-form';
 
 import './signup-form.styles.scss';
+import { REGISTER_FORM_FEATURE_KEY } from '../../store';
 
 /* eslint-disable-next-line */
 export interface SignupFormProps extends InjectedFormProps {}
@@ -46,7 +47,7 @@ export const SignupForm = (props: SignupFormProps) => {
         component={TextInput}
       />
 
-      <button type="submit" className={`btn`} >
+      <button type="submit" className={`btn`}>
         Signup
       </button>
       <LoadingSpinner />
@@ -55,4 +56,7 @@ export const SignupForm = (props: SignupFormProps) => {
   );
 };
 
-export default reduxForm({ form: 'signupForm' })(SignupForm);
+export default reduxForm({
+  form: 'signupForm',
+  getFormState: state => state[REGISTER_FORM_FEATURE_KEY].form
+})(SignupForm);
