@@ -1,7 +1,12 @@
 import { LoadingSpinner, TextInput } from '@tf-test/react/ui';
+import {
+  buildYupSchema,
+  emailValidator,
+  usernameValidator,
+  phoneValidator
+} from '@tf-test/shared/util-validators';
 import { Formik, FormikProps } from 'formik';
 import React from 'react';
-import * as Yup from 'yup';
 import './signup-form.styles.scss';
 
 /* eslint-disable-next-line */
@@ -11,22 +16,22 @@ export interface SignupFormProps {
 
 export interface SignupFormSchema {
   username: string;
-  password: string;
+  email: string;
   phone: number;
 }
 
 export const SignupForm = (props: SignupFormProps) => {
   return (
     <Formik
-      initialValues={{ username: '', password: '', phone: 0 }}
+      initialValues={{ username: '', email: '', phone: 0 }}
       onSubmit={async values => {
         await new Promise(resolve => setTimeout(resolve, 500));
         alert(JSON.stringify(values, null, 2));
       }}
-      validationSchema={Yup.object().shape({
-        email: Yup.string()
-          .email()
-          .required('Required')
+      validationSchema={buildYupSchema({
+        username: usernameValidator,
+        email: emailValidator,
+        phone: phoneValidator
       })}
     >
       {(props: FormikProps<SignupFormSchema>) => {
@@ -66,21 +71,19 @@ export const SignupForm = (props: SignupFormProps) => {
               Password
             </label>
             <TextInput
-              id="password"
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={values.password}
+              id="email"
+              type="text"
+              name="email"
+              placeholder="yourname@example.com"
+              value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
               className={
-                errors.password && touched.password
-                  ? 'txt-input error'
-                  : 'txt-input'
+                errors.email && touched.email ? 'txt-input error' : 'txt-input'
               }
             />
-            {errors.password && touched.password && (
-              <div className="input-feedback">{errors.password}</div>
+            {errors.email && touched.email && (
+              <div className="input-feedback">{errors.email}</div>
             )}
             <label className="lbl-input" htmlFor="phone">
               Phone Number
@@ -88,7 +91,7 @@ export const SignupForm = (props: SignupFormProps) => {
             <TextInput
               id="phone"
               name="phone"
-              type="number"
+              type="text"
               placeholder="(123) 456 78 90"
               value={values.phone}
               onChange={handleChange}
