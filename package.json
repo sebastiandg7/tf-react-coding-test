@@ -35,6 +35,7 @@
     "@types/faker": "^4.1.10",
     "@types/react-redux": "7.1.5",
     "@types/redux-form": "^8.2.3",
+    "@types/yup": "^0.26.33",
     "destyle.css": "^1.0.11",
     "document-register-element": "1.13.1",
     "faker": "^4.1.0",
