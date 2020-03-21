@@ -1,5 +1,7 @@
 import React from 'react';
-import SignupForm from './containers/signup-form/signup-form';
+import SignupForm, {
+  SignupFormSchema
+} from './containers/signup-form/signup-form';
 
 /* eslint-disable-next-line */
 export interface ReactCodingTestFeatureRegisterFormProps {}
@@ -7,11 +9,11 @@ export interface ReactCodingTestFeatureRegisterFormProps {}
 export const ReactCodingTestFeatureRegisterForm = (
   props: ReactCodingTestFeatureRegisterFormProps
 ) => {
-  const onSignup = (values: FormData) => {
+  const onSignup = (values: SignupFormSchema) => {
     console.log('Form submitted :)', values);
   };
 
-  return <SignupForm />;
+  return <SignupForm onSubmit={onSignup} />;
 };
 
 export default ReactCodingTestFeatureRegisterForm;
