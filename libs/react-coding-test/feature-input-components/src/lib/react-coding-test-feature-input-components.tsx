@@ -85,7 +85,7 @@ export const ReactCodingTestFeatureInputComponents = (
 
       <div className="result">
         {inputRendered ? (
-          <FocusableInput focused={focused} placeHolder="Focusable input" />
+          <FocusableInput focused={focused} placeholder="Focusable input" />
         ) : (
           <></>
         )}
