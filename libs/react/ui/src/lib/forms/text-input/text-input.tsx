@@ -1,9 +1,13 @@
-import React, { useRef } from 'react';
-
+import React from 'react';
 import styled from 'styled-components';
 
 /* eslint-disable-next-line */
-export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {}
+export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
+  /**
+   * Temporary fix for: https://github.com/DefinitelyTyped/DefinitelyTyped/issues/35572
+   */
+  ref?: React.Ref<HTMLInputElement>;
+}
 
 const StyledTextInput = styled.div`
   .txt-input {
@@ -18,8 +22,8 @@ const StyledTextInput = styled.div`
   }
 `;
 
-export const TextInput = React.forwardRef(
-  (props: TextInputProps, ref: React.Ref<HTMLInputElement>) => {
+export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
+  (props, ref) => {
     return (
       <StyledTextInput>
         <input

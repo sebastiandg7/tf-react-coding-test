@@ -1,7 +1,6 @@
-import React, { useRef, useEffect } from 'react';
-
-import styled from 'styled-components';
 import { TextInput, TextInputProps } from '@tf-test/react/ui';
+import React, { useEffect, useRef } from 'react';
+import styled from 'styled-components';
 
 /* eslint-disable-next-line */
 export interface FocusableInputProps extends TextInputProps {
@@ -11,14 +10,13 @@ export interface FocusableInputProps extends TextInputProps {
 const StyledFocusableInput = styled.div``;
 
 export const FocusableInput = (props: FocusableInputProps) => {
-  const inputRef = useRef<HTMLInputElement>();
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (props.focused) {
       inputRef.current.focus();
     }
   });
-
   return (
     <StyledFocusableInput>
       <TextInput ref={inputRef} {...props} />
