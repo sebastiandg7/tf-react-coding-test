@@ -17,6 +17,6 @@ export const emailValidator = Yup.string()
   .required('Your email address is required');
 
 export const phoneValidator = Yup.string()
-  .matches(/(^3[0-1]\d$|^320$)/, 'Your phone number must start with 300 to 320')
+  .matches(/^(3[0-1]\d|320)/, 'Your phone number must start with 300 to 320')
   .matches(/(^[\d]{10}$)/, 'Your phone number must be 10 digist long')
   .required('Your phone number is required');
