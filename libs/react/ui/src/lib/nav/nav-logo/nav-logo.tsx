@@ -12,8 +12,6 @@ const StyledNavLogo = styled.div`
   align-items: center;
   justify-content: center;
 
-  .nav-logo {
-  }
 `;
 
 export const NavLogo = (props: NavLogoProps) => {

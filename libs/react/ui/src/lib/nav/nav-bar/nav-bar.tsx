@@ -12,6 +12,10 @@ const StyledNavBar = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 0 0.5em;
+
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 export const NavBar = (props: NavBarProps) => {

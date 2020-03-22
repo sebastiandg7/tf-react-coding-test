@@ -1,9 +1,9 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, HTMLProps } from 'react';
 
 import styled from 'styled-components';
 
 /* eslint-disable-next-line */
-export interface NavListItemProps {
+export interface NavListItemProps extends HTMLProps<HTMLLIElement> {
   children: ReactNode;
 }
 
@@ -26,12 +26,13 @@ const StyledNavListItem = styled.li`
     background-color: #fff;
     color: #143055;
   }
-
-
 `;
 
 export const NavListItem = (props: NavListItemProps) => {
-  return <StyledNavListItem>{props.children}</StyledNavListItem>;
+  const { className, children } = props;
+  return (
+    <StyledNavListItem className={className}>{children}</StyledNavListItem>
+  );
 };
 
 export default NavListItem;

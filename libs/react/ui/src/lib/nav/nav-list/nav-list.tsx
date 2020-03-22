@@ -1,9 +1,9 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, HTMLProps } from 'react';
 
 import styled from 'styled-components';
 
 /* eslint-disable-next-line */
-export interface NavListProps {
+export interface NavListProps extends HTMLProps<HTMLUListElement> {
   children: ReactNode;
 }
 
@@ -14,7 +14,8 @@ const StyledNavList = styled.ul`
 `;
 
 export const NavList = (props: NavListProps) => {
-  return <StyledNavList>{props.children}</StyledNavList>;
+  const { className, children } = props;
+  return <StyledNavList className={className}>{children}</StyledNavList>;
 };
 
 export default NavList;

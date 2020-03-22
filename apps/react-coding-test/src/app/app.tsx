@@ -20,21 +20,21 @@ const ReactCodingTestFeatureRegsiterForm = lazy(() =>
 );
 
 const StyledApp = styled.div`
-  height: 100%;
-  min-width: 300px;
-  max-width: 800px;
-  margin: 50px auto;
-
-  header {
-    background-color: #143055;
-    color: white;
-    padding: 5px;
-    border-radius: 3px;
-  }
+  height: 100vh;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
 
   main {
+    overflow-y: auto;
+    padding: 1em 10em;
     height: 100%;
-    padding: 1em 3em;
+  }
+
+  @media only screen and (max-width: 800px) {
+    main {
+      padding: 1em 2em;
+    }
   }
 `;
 
