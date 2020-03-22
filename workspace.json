@@ -79,6 +79,21 @@
             "tsConfig": "apps/react-coding-test/tsconfig.spec.json",
             "passWithNoTests": true
           }
+        },
+        "deploy": {
+          "builder": "@nrwl/workspace:run-commands",
+          "configurations": {
+            "surge": {
+              "commands": [
+                {
+                  "command": "cp dist/apps/react-coding-test/index.html dist/apps/react-coding-test/200.html"
+                },
+                {
+                  "command": "surge -p dist/apps/react-coding-test -d sdg-tf-react-coding-test.surge.sh"
+                }
+              ]
+            }
+          }
         }
       }
     },
