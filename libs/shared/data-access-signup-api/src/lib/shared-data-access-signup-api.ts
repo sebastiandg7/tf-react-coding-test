@@ -25,7 +25,7 @@ const apiClientConfig: AxiosRequestConfig = {
   baseURL: 'http://sgaviria.com',
   responseType: 'json',
   headers: {
-    'Tranqui-FrontendDeveloper': 'justTestingThisOut',
+    'Tranqui-FrontendDeveloper': 'sebastianDuqueGutierrez',
     'Content-Type': 'application/x-www-form-urlencoded'
   }
 };
