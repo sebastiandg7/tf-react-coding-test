@@ -26,10 +26,7 @@ export const SignupForm = (props: SignupFormProps) => {
   return (
     <Formik
       initialValues={{ username: '', email: '', phone: '' }}
-      onSubmit={async values => {
-        await new Promise(resolve => setTimeout(resolve, 500));
-        alert(JSON.stringify(values, null, 2));
-      }}
+      onSubmit={props.onSubmit}
       validationSchema={buildYupSchema({
         username: usernameValidator,
         email: emailValidator,
@@ -57,7 +54,7 @@ export const SignupForm = (props: SignupFormProps) => {
               id="username"
               type="text"
               name="username"
-              placeholder="Enter your username"
+              placeholder="anottakerusername"
               value={values.username}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -70,8 +67,8 @@ export const SignupForm = (props: SignupFormProps) => {
             {errors.username && touched.username && (
               <div className="input-feedback">{errors.username}</div>
             )}
-            <label className="lbl-input" htmlFor="password">
-              Password
+            <label className="lbl-input" htmlFor="email">
+              Email
             </label>
             <TextInput
               id="email"

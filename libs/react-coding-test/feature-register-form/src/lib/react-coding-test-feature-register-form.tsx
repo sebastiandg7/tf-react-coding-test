@@ -9,8 +9,9 @@ export interface ReactCodingTestFeatureRegisterFormProps {}
 export const ReactCodingTestFeatureRegisterForm = (
   props: ReactCodingTestFeatureRegisterFormProps
 ) => {
-  const onSignup = (values: SignupFormSchema) => {
+  const onSignup = async (values: SignupFormSchema) => {
     console.log('Form submitted :)', values);
+    await new Promise(resolve => setTimeout(resolve, 2000));
   };
 
   return <SignupForm onSubmit={onSignup} />;
