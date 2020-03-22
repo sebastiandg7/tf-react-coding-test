@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { HTMLProps } from 'react';
 import styled from 'styled-components';
 import ScaleLoader from 'react-spinners/ScaleLoader';
 
 /* eslint-disable-next-line */
-export interface LoadingSpinnerProps {}
+export interface LoadingSpinnerProps extends HTMLProps<HTMLDivElement> {}
 
 const StyledLoadingSpinner = styled.div`
   height: auto;
@@ -20,7 +20,7 @@ const StyledLoadingSpinner = styled.div`
 export const LoadingSpinner = (props: LoadingSpinnerProps) => {
   return (
     <StyledLoadingSpinner>
-      <div className="wrapper">
+      <div className={`wrapper ${props.className}`} {...props}>
         <ScaleLoader color={'#143055'} />
       </div>
     </StyledLoadingSpinner>
