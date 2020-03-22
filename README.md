@@ -9,7 +9,7 @@
 
 ### 🏠 [Homepage](https://github.com/sebastiandg7/tf-react-coding-test)
 
-### ✨ [Demo](https://sebastiandg7.github.io/tf-react-coding-test/)
+### ✨ [Demo](https://sebastiandg7.github.io/tf-react-coding-test/) - Also hosted in [surge.sh](http://sdg-tf-react-coding-test.surge.sh) (over HTTP, API calls will work)
 
 ## Usage
 
