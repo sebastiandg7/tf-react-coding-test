@@ -47,6 +47,9 @@
     },
     "shared-util-data": {
       "tags": []
+    },
+    "react-util-helpers": {
+      "tags": []
     }
   }
 }

@@ -1,3 +1,6 @@
+import React from 'react';
+import { Formik, FormikProps } from 'formik';
+import { DisplayFormikState } from '@tf-test/react/util-helpers';
 import { LoadingSpinner, TextInput } from '@tf-test/react/ui';
 import {
   buildYupSchema,
@@ -5,8 +8,7 @@ import {
   usernameValidator,
   phoneValidator
 } from '@tf-test/shared/util-validators';
-import { Formik, FormikProps } from 'formik';
-import React from 'react';
+
 import './signup-form.styles.scss';
 
 /* eslint-disable-next-line */
@@ -125,18 +127,3 @@ export const SignupForm = (props: SignupFormProps) => {
 };
 
 export default SignupForm;
-
-export const DisplayFormikState = props => (
-  <div style={{ margin: '1rem 0' }}>
-    <h3 style={{ fontFamily: 'monospace' }} />
-    <pre
-      style={{
-        background: '#f6f8fa',
-        fontSize: '.65rem',
-        padding: '.5rem'
-      }}
-    >
-      <strong>props</strong> = {JSON.stringify(props, null, 2)}
-    </pre>
-  </div>
-);

@@ -41,7 +41,8 @@
       "@tf-test/shared/util-generators": [
         "libs/shared/util-generators/src/index.ts"
       ],
-      "@tf-test/shared/util-data": ["libs/shared/util-data/src/index.ts"]
+      "@tf-test/shared/util-data": ["libs/shared/util-data/src/index.ts"],
+      "@tf-test/react/util-helpers": ["libs/react/util-helpers/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
