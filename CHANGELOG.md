@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/sebastiandg7/tf-react-coding-test/compare/v0.1.1...v0.1.3) (2020-03-22)
+
+
+### Features
+
+* **coding-test:** add a little responsiveness 📱 ([fcb21f0](https://github.com/sebastiandg7/tf-react-coding-test/commit/fcb21f02011a6a825dad5907795be850d154f1d2))
+* **worksapce:** add surge deploy stage ([dc41873](https://github.com/sebastiandg7/tf-react-coding-test/commit/dc4187398fb405962b0f68b460672d8b81ce7169))
+
+
+### Bug Fixes
+
+* **docs:** fix typo ([f41c50a](https://github.com/sebastiandg7/tf-react-coding-test/commit/f41c50ad4c65acb74ded45bc37c85976bf6c70cc))
+
 ### [0.1.1](https://github.com/sebastiandg7/tf-react-coding-test/compare/v0.1.0...v0.1.1) (2020-03-22)
 
 
