@@ -44,7 +44,7 @@ npm run dep-graph
 
 ## Workspace setup
 
-You can find all the generated code script under [`./tools/workpsace-setup.sh`](/tools/workpsace-setup.sh) (suitable for worksapce architecture replication)
+You can find all the generated code script under [`./tools/workspace-setup.sh`](/tools/workspace-setup.sh) (suitable for worksapce architecture replication)
 
 ## Author
 
