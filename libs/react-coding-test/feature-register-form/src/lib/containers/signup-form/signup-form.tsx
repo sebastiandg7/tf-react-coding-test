@@ -17,13 +17,13 @@ export interface SignupFormProps {
 export interface SignupFormSchema {
   username: string;
   email: string;
-  phone: number;
+  phone: string;
 }
 
 export const SignupForm = (props: SignupFormProps) => {
   return (
     <Formik
-      initialValues={{ username: '', email: '', phone: 0 }}
+      initialValues={{ username: '', email: '', phone: '' }}
       onSubmit={async values => {
         await new Promise(resolve => setTimeout(resolve, 500));
         alert(JSON.stringify(values, null, 2));
