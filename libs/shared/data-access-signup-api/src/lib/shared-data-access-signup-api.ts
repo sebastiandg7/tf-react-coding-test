@@ -38,7 +38,6 @@ export const doSignup = async (
   // Convert signup responses to standard errors
   signupClient.interceptors.response.use(
     response => {
-      console.log('Intercepted response', response);
       const { status, error: errorMessage } = response.data;
       if (!status) {
         const error: SignupError = {
