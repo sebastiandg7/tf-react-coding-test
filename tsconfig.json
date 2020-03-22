@@ -42,7 +42,10 @@
         "libs/shared/util-generators/src/index.ts"
       ],
       "@tf-test/shared/util-data": ["libs/shared/util-data/src/index.ts"],
-      "@tf-test/react/util-helpers": ["libs/react/util-helpers/src/index.ts"]
+      "@tf-test/react/util-helpers": ["libs/react/util-helpers/src/index.ts"],
+      "@tf-test/shared/data-access-signup-api": [
+        "libs/shared/data-access-signup-api/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

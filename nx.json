@@ -50,6 +50,9 @@
     },
     "react-util-helpers": {
       "tags": []
+    },
+    "shared-data-access-signup-api": {
+      "tags": []
     }
   }
 }
