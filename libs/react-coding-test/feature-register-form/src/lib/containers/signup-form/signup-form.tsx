@@ -55,7 +55,10 @@ export const SignupForm = (props: SignupFormProps) => {
               name="username"
               placeholder="anottakenusername"
               value={values.username}
-              onChange={handleChange}
+              onChange={(event: React.FormEvent<HTMLInputElement>) => {
+                event.currentTarget.value = event.currentTarget.value.toLowerCase();
+                handleChange(event);
+              }}
               onBlur={handleBlur}
               className={`txt-input ${
                 errors.username && touched.username ? 'error' : ''
