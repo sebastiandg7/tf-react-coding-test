@@ -1,7 +1,5 @@
 export * from './lib/pages/loading-spinner/loading-spinner';
 export * from './lib/forms/toggle-switch/toggle-switch';
-export * from './lib/forms/email-input/email-input';
-export * from './lib/forms/password-input/password-input';
 export * from './lib/forms/text-input/text-input';
 export * from './lib/pages/not-found/not-found';
 export * from './lib/nav/nav-list-item/nav-list-item';
