@@ -1,5 +1,5 @@
 import { LoadingSpinner, TextInput } from '@tf-test/react/ui';
-import { DisplayFormikState } from '@tf-test/react/util-helpers';
+import { stripCharacters } from '@tf-test/shared/util-formatters';
 import {
   buildYupSchema,
   emailValidator,
@@ -8,6 +8,7 @@ import {
 } from '@tf-test/shared/util-validators';
 import { Formik, FormikProps } from 'formik';
 import React from 'react';
+import InputMask from 'react-input-mask';
 import './signup-form.styles.scss';
 
 /* eslint-disable-next-line */
@@ -56,11 +57,9 @@ export const SignupForm = (props: SignupFormProps) => {
               value={values.username}
               onChange={handleChange}
               onBlur={handleBlur}
-              className={
-                errors.username && touched.username
-                  ? 'txt-input error'
-                  : 'txt-input'
-              }
+              className={`txt-input ${
+                errors.username && touched.username ? 'error' : ''
+              }`}
             />
             {errors.username && touched.username && (
               <div className="input-feedback">{errors.username}</div>
@@ -76,9 +75,9 @@ export const SignupForm = (props: SignupFormProps) => {
               value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
-              className={
-                errors.email && touched.email ? 'txt-input error' : 'txt-input'
-              }
+              className={`txt-input ${
+                errors.email && touched.email ? 'error' : ''
+              }`}
             />
             {errors.email && touched.email && (
               <div className="input-feedback">{errors.email}</div>
@@ -86,18 +85,28 @@ export const SignupForm = (props: SignupFormProps) => {
             <label className="lbl-input" htmlFor="phone">
               Phone Number
             </label>
-            <TextInput
+            <InputMask
               id="phone"
               name="phone"
               type="text"
-              placeholder="(123) 456 78 90"
+              mask="(999) 999 99 99"
+              maskPlaceholder="_"
+              placeholder="(315) 1234 56 78"
               value={values.phone}
-              onChange={handleChange}
+              onChange={(event: React.FormEvent<HTMLInputElement>) => {
+                event.currentTarget.value = stripCharacters(
+                  event.currentTarget.value,
+                  '() _'
+                );
+                handleChange(event);
+              }}
               onBlur={handleBlur}
-              className={
-                errors.phone && touched.phone ? 'txt-input error' : 'txt-input'
-              }
-            />
+              className={`txt-input ${
+                errors.phone && touched.phone ? 'error' : ''
+              }`}
+            >
+              <TextInput />
+            </InputMask>
             {errors.phone && touched.phone && (
               <div className="input-feedback">{errors.phone}</div>
             )}
@@ -108,6 +117,7 @@ export const SignupForm = (props: SignupFormProps) => {
                 Signup
               </button>
             )}
+            {/* <DisplayFormikState {...props} /> */}
           </form>
         );
       }}
