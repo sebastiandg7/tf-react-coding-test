@@ -108,8 +108,6 @@ export const SignupForm = (props: SignupFormProps) => {
                 Signup
               </button>
             )}
-
-            <DisplayFormikState {...props} />
           </form>
         );
       }}
