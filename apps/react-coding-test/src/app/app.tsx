@@ -63,7 +63,6 @@ export const App = () => {
             />
             <Route
               path="/register-form"
-              exact
               component={ReactCodingTestFeatureRegsiterForm}
             />
             <Route path="/voting-list" exact component={RandomVotingList} />
