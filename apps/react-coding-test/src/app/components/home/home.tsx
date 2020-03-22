@@ -11,7 +11,6 @@ const StyledHome = styled.div`
   justify-content: center;
   color: pink;
   text-align: center;
-  height: 25%;
 
   h1 {
     font-size: 2.5rem;

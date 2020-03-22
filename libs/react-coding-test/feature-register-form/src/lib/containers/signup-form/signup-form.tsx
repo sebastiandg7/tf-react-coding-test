@@ -14,11 +14,11 @@ import styled from 'styled-components';
 const StyledSignupForm = styled.div`
   .lbl-input {
     display: table;
-    margin: 2em auto 0;
+    margin: 0 auto;
   }
 
   .txt-input {
-    margin: 5px auto 0;
+    margin: 5px auto 1.2em;
 
     &.error {
       border: 1px solid red;

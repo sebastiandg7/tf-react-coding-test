@@ -24,6 +24,8 @@ const StyledApp = styled.div`
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   main {
     overflow-y: auto;
