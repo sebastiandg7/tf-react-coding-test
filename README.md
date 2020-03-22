@@ -1,76 +1,69 @@
-# TfTest
+# Welcome to tf-react-coding-test 👋
 
-This project was generated using [Nx](https://nx.dev).
+![Version](https://img.shields.io/badge/version-0.1.1-blue.svg?cacheSeconds=2592000)
+[![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/sebastiandg7/tf-react-coding-test/blob/master/README.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
+[![Twitter: sebastiandg7](https://img.shields.io/twitter/follow/sebastiandg7.svg?style=social)](https://twitter.com/sebastiandg7)
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>
+> react coding challenge
 
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+### 🏠 [Homepage](https://github.com/sebastiandg7/tf-react-coding-test)
 
-## Adding capabilities to your workspace
+### ✨ [Demo](https://sebastiandg7.github.io/tf-react-coding-test/)
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+## Usage
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+### Install
 
-Below are some plugins which you can add to your workspace:
+```sh
+npm install
+```
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+### Serve
 
-## Generate an application
+```sh
+npm start react-coding-test
+```
 
-Run `nx g @nrwl/react:app my-app` to generate an application.
+### Dependency graph
 
-> You can use any of the plugins above to generate applications as well.
+```sh
+npm run dep-graph
+```
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+## Used libs & techniques
 
-## Generate a library
+- **[Nx](https://nx.dev/):** workspace & dev tools
+- **[standard-version](https://github.com/conventional-changelog/standard-version):** automatic versioning & changelog generation
+- **[Lazy loading](https://reactjs.org/docs/code-splitting.html#reactlazy):** lazy load application features
+- **[Redux Dynamic Modules](https://redux-dynamic-modules.js.org/):** modular Redux state management loaded on demand
+- **[Faker.js](https://github.com/marak/Faker.js):** fake data generation
+- **[Formik]():** forms handling
+- **[Yup]():** data validation
+- **[destyle.css](https://nicolas-cusan.github.io/destyle.css):** CSS reset
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
+## Workspace setup
 
-> You can also use any of the plugins above to generate libraries as well.
+You can find all the generated code script under [`./tools/workpsace-setup.sh`](/tools/workpsace-setup.sh) (suitable for worksapce architecture replication)
 
-Libraries are sharable across libraries and applications. They can be imported from `@tf-test/mylib`.
+## Author
 
-## Development server
+👤 **Sebastián Duque Gutiérrez**
 
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+- Twitter: [@sebastiandg7](https://twitter.com/sebastiandg7)
+- Github: [@sebastiandg7](https://github.com/sebastiandg7)
+- LinkedIn: [@sebastianduqueg](https://linkedin.com/in/sebastianduqueg)
 
-## Code scaffolding
+## 🤝 Contributing
 
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
+Contributions, issues and feature requests are welcome!
 
-## Build
+Feel free to check [issues page](https://github.com/sebastiandg7/tf-react-coding-test/issues).
 
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Show your support
 
-## Running unit tests
+Give a ⭐️ if this project helped you!
 
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
+---
 
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
