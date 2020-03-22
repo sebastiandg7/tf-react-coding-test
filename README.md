@@ -38,8 +38,8 @@ npm run dep-graph
 - **[Lazy loading](https://reactjs.org/docs/code-splitting.html#reactlazy):** lazy load application features
 - **[Redux Dynamic Modules](https://redux-dynamic-modules.js.org/):** modular Redux state management loaded on demand
 - **[Faker.js](https://github.com/marak/Faker.js):** fake data generation
-- **[Formik]():** forms handling
-- **[Yup]():** data validation
+- **[Formik](https://jaredpalmer.com/formik):** forms handling
+- **[Yup](https://github.com/jquense/yup):** data validation
 - **[destyle.css](https://nicolas-cusan.github.io/destyle.css):** CSS reset
 
 ## Workspace setup
