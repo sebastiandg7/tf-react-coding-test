@@ -1,6 +1,6 @@
 import { doSignup, SignupError } from '@tf-test/shared/data-access-signup-api';
 import React, { useState } from 'react';
-import { Redirect, Route, Switch, RouteComponentProps } from 'react-router-dom';
+import { Redirect, Route, Switch, RouteComponentProps, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import SignupForm, {
   SignupFormSchema
@@ -29,6 +29,7 @@ export const ReactCodingTestFeatureRegisterForm = (
   const { match } = props;
 
   const [signupError, setSignupError] = useState<SignupError>(null);
+  const history = useHistory();
 
   const onSignup = async (values: SignupFormSchema) => {
     setSignupError(null);
@@ -39,6 +40,7 @@ export const ReactCodingTestFeatureRegisterForm = (
         email,
         phone_number: Number(phone)
       });
+      history.push(`${match.path}/success`);
     } catch (err) {
       setSignupError(err);
     }
