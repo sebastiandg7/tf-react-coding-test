@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/sebastiandg7/tf-react-coding-test/compare/v0.0.1...v0.1.0) (2020-03-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* **style:** code formatting // Just for versionin
+
+### Features
+
+* **coding-test:** fix register-form route match type ([1c0d0ef](https://github.com/sebastiandg7/tf-react-coding-test/commit/1c0d0ef519b99451073a3aea0b62742866652259))
+* **register-form:** add basic signup form layout ([7db0362](https://github.com/sebastiandg7/tf-react-coding-test/commit/7db03622a2b67852e88bac0ddca5a7f755c26f45))
+* **register-form:** add fields validators ([0f94ec4](https://github.com/sebastiandg7/tf-react-coding-test/commit/0f94ec4ef34a8aa1c09f199119674e0945490b46))
+* **register-form:** add formik for signup form handling ([216f52c](https://github.com/sebastiandg7/tf-react-coding-test/commit/216f52c45c09d8228dac43180583e5f5baa56618))
+* **register-form:** add loading spinner for submit process ([78bfc5f](https://github.com/sebastiandg7/tf-react-coding-test/commit/78bfc5f4aa4015efdf53040c4b6467fd08727925))
+* **register-form:** add phone input mask ([1c010e5](https://github.com/sebastiandg7/tf-react-coding-test/commit/1c010e52dda42a3edf40e141c563137483f296ab))
+* **register-form:** add redux-form wrapping ([0cbd252](https://github.com/sebastiandg7/tf-react-coding-test/commit/0cbd252a0b8ae50f5980b9eb068b7b17db8fe970))
+* **register-form:** add routing for signup states ([edba119](https://github.com/sebastiandg7/tf-react-coding-test/commit/edba119bf05ed5e8947fed9489024fa437bd3513))
+* **register-form:** add success signup component ([59bfa56](https://github.com/sebastiandg7/tf-react-coding-test/commit/59bfa56895e3501eac58c1a2dc6019cb16cd7b0a))
+* **register-form:** display signup errors ([dce9ed2](https://github.com/sebastiandg7/tf-react-coding-test/commit/dce9ed2f11d53a4c97131ea13cc96fe706044e8c))
+* **register-form:** improve form interaction ([bfa038f](https://github.com/sebastiandg7/tf-react-coding-test/commit/bfa038f0cbf9f6663a16e945964a6516b26d5535))
+* **register-form:** navigate to signup success when signup completed ([3947de7](https://github.com/sebastiandg7/tf-react-coding-test/commit/3947de773abaa53c72ed7b8c25fcb9a9601fced6))
+* **register-form:** set username to lowercase ([acfe762](https://github.com/sebastiandg7/tf-react-coding-test/commit/acfe7622d519821e8dfe5c0c4ba0ac409287443c))
+* **register-form:** signup form styling ([23ec256](https://github.com/sebastiandg7/tf-react-coding-test/commit/23ec256cbc7d263c88e1dfeb6199e3c49ff81943))
+* **register-form:** signup submit util ([d72adad](https://github.com/sebastiandg7/tf-react-coding-test/commit/d72adadfff743c477830d6ee80e685ff4ebd995d))
+* **style:** code formatting ([333dcd0](https://github.com/sebastiandg7/tf-react-coding-test/commit/333dcd0afcbb778022a9ff6a95e4ccfa81321881))
+* **util-formatters:** add stripe characters util ([9a6e5ca](https://github.com/sebastiandg7/tf-react-coding-test/commit/9a6e5cac6957cfd9551b3fa7987e003d6f458367))
+* **workspace:** add react helpers util lib ([f70f611](https://github.com/sebastiandg7/tf-react-coding-test/commit/f70f611543e8741d0733fefea98cc45cb0305ff7))
+* **workspace:** add signup api data-access lib ([190f371](https://github.com/sebastiandg7/tf-react-coding-test/commit/190f371bcbf45156db0b8be8f21eb3af2b1c466d))
+
+
+### Bug Fixes
+
+* **input-components:** add workaround for refForwarding types error ([9dcb2af](https://github.com/sebastiandg7/tf-react-coding-test/commit/9dcb2af92750a19080232bbe35490b8c7e5e7421))
+* **input-components:** fix wrong placeholder property name ([b2fd0b3](https://github.com/sebastiandg7/tf-react-coding-test/commit/b2fd0b3923f3e3f745b44df9d4b846c96f6a75de))
+* **react-ui:** remove text-input required attribute ([ab1c615](https://github.com/sebastiandg7/tf-react-coding-test/commit/ab1c615468fc1f1b45a2a0d0ea1e2bbf50e2f222))
+* **register-form:** correct phone start error message ([9fa730f](https://github.com/sebastiandg7/tf-react-coding-test/commit/9fa730f31abbe37b3a0ad1bf4d629f77277a0e0c))
+* **register-form:** correct phone start regexp ([0bac0fa](https://github.com/sebastiandg7/tf-react-coding-test/commit/0bac0faef1b2ce3d80c9f479fc36d9b43f881504))
+* **register-form:** fix missing '(' in regexp ([9c6723e](https://github.com/sebastiandg7/tf-react-coding-test/commit/9c6723e9278633990a4212177e03a99cf84ebd04))
+* **register-form:** remove redux-form (issue [#1](https://github.com/sebastiandg7/tf-react-coding-test/issues/1)) ([813579e](https://github.com/sebastiandg7/tf-react-coding-test/commit/813579e3417225d0c71e2e75b92b21e85b0c602e))
+* **register-form:** set phone field type to string ([7cbf7cf](https://github.com/sebastiandg7/tf-react-coding-test/commit/7cbf7cfea7147a98e0de07f0de2c5cc4afdb4f4f))
+* tell redux-form the form state location ([f6ce249](https://github.com/sebastiandg7/tf-react-coding-test/commit/f6ce249e1dced98000d696df4d2e979c00b03459))
+
 ### [0.0.1](https://github.com/sebastiandg7/tf-react-coding-test/compare/v0.0.0...v0.0.1) (2020-03-18)
 
 
