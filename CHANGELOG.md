@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/sebastiandg7/tf-react-coding-test/compare/v0.1.0...v0.1.1) (2020-03-22)
+
+
+### Bug Fixes
+
+* **register-form:** apply styles in component scope ([8f34640](https://github.com/sebastiandg7/tf-react-coding-test/commit/8f34640c9749b5823460ca59c9c5bbe349c7a8ac))
+
 ## [0.1.0](https://github.com/sebastiandg7/tf-react-coding-test/compare/v0.0.1...v0.1.0) (2020-03-22)
 
 
