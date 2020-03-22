@@ -40,6 +40,7 @@ export const SignupForm = (props: SignupFormProps) => {
           touched,
           errors,
           isSubmitting,
+          isValid,
           handleChange,
           handleBlur,
           handleSubmit
@@ -103,11 +104,17 @@ export const SignupForm = (props: SignupFormProps) => {
             {errors.phone && touched.phone && (
               <div className="input-feedback">{errors.phone}</div>
             )}
-
-            <button type="submit" className={`btn`} disabled={isSubmitting}>
-              Signup
-            </button>
-            <LoadingSpinner />
+            {isSubmitting ? (
+              <LoadingSpinner className="loading-spinner" />
+            ) : (
+              <button
+                type="submit"
+                className={`btn`}
+                disabled={isSubmitting || !isValid}
+              >
+                Signup
+              </button>
+            )}
 
             <DisplayFormikState {...props} />
           </form>
