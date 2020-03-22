@@ -1,11 +1,16 @@
 import { doSignup, SignupError } from '@tf-test/shared/data-access-signup-api';
 import React, { useState } from 'react';
-import { Redirect, Route, Switch, RouteComponentProps, useHistory } from 'react-router-dom';
+import {
+  Route,
+  RouteComponentProps,
+  Switch,
+  useHistory
+} from 'react-router-dom';
 import styled from 'styled-components';
+import SignupSuccess from './components/signup-success/signup-success';
 import SignupForm, {
   SignupFormSchema
 } from './containers/signup-form/signup-form';
-import SignupSuccess from './components/signup-success/signup-success';
 
 const StyledReactCodingTestFeatureRegisterForm = styled.div`
   .signup-error {
