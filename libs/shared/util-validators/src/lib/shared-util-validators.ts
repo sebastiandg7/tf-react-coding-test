@@ -3,7 +3,6 @@ import * as Yup from 'yup';
 export const buildYupSchema = (fields: object) => Yup.object().shape(fields);
 
 export const usernameValidator = Yup.string()
-  .lowercase()
   .matches(/(^[a-zA-Z0-9_]+$)/, 'You must only use letters or numbers')
   .min(
     4,
