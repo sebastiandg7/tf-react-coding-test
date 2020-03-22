@@ -1,14 +1,13 @@
-import React from 'react';
-import { Formik, FormikProps } from 'formik';
-import { DisplayFormikState } from '@tf-test/react/util-helpers';
 import { LoadingSpinner, TextInput } from '@tf-test/react/ui';
+import { DisplayFormikState } from '@tf-test/react/util-helpers';
 import {
   buildYupSchema,
   emailValidator,
-  usernameValidator,
-  phoneValidator
+  phoneValidator,
+  usernameValidator
 } from '@tf-test/shared/util-validators';
-
+import { Formik, FormikProps } from 'formik';
+import React from 'react';
 import './signup-form.styles.scss';
 
 /* eslint-disable-next-line */
@@ -39,7 +38,6 @@ export const SignupForm = (props: SignupFormProps) => {
           touched,
           errors,
           isSubmitting,
-          isValid,
           handleChange,
           handleBlur,
           handleSubmit
@@ -54,7 +52,7 @@ export const SignupForm = (props: SignupFormProps) => {
               id="username"
               type="text"
               name="username"
-              placeholder="anottakerusername"
+              placeholder="anottakenusername"
               value={values.username}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -106,11 +104,7 @@ export const SignupForm = (props: SignupFormProps) => {
             {isSubmitting ? (
               <LoadingSpinner className="loading-spinner" />
             ) : (
-              <button
-                type="submit"
-                className={`btn`}
-                disabled={isSubmitting || !isValid}
-              >
+              <button type="submit" className={`btn`} disabled={isSubmitting}>
                 Signup
               </button>
             )}
