@@ -1,13 +1,13 @@
 {
   "name": "tf-test",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "license": "MIT",
   "scripts": {
     "nx": "nx",
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "deploy:react-coding-test:surge": "nx deploy react-coding-test --configuration=surge",
+    "deploy:react-coding-test:surge": "nx run react-coding-test:build:production && nx run react-coding-test:deploy:surge",
     "lint": "nx workspace-lint && nx lint",
     "e2e": "nx e2e",
     "affected:apps": "nx affected:apps",

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/sebastiandg7/tf-react-coding-test/compare/v0.1.3...v0.1.4) (2020-03-22)
+
+
+### Features
+
+* **coding-test:** fix scroll not working on small devices ([9c3ce64](https://github.com/sebastiandg7/tf-react-coding-test/commit/9c3ce64069ae7c7eb47788b0a684cbc5eca8e60c))
+
 ### [0.1.3](https://github.com/sebastiandg7/tf-react-coding-test/compare/v0.1.1...v0.1.3) (2020-03-22)
 
 
