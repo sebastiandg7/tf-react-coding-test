@@ -2,6 +2,7 @@ import React from 'react';
 import SignupForm, {
   SignupFormSchema
 } from './containers/signup-form/signup-form';
+import { doSignup } from '@tf-test/shared/data-access-signup-api';
 
 /* eslint-disable-next-line */
 export interface ReactCodingTestFeatureRegisterFormProps {}
@@ -10,11 +11,23 @@ export const ReactCodingTestFeatureRegisterForm = (
   props: ReactCodingTestFeatureRegisterFormProps
 ) => {
   const onSignup = async (values: SignupFormSchema) => {
-    console.log('Form submitted :)', values);
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    const { username, email, phone } = values;
+    try {
+      await doSignup({
+        username,
+        email,
+        phone_number: Number(phone)
+      });
+    } catch (err) {
+      console.log('An error, I got it :)', err);
+    }
   };
 
-  return <SignupForm onSubmit={onSignup} />;
+  return (
+    <>
+      <SignupForm onSubmit={onSignup} />
+    </>
+  );
 };
 
 export default ReactCodingTestFeatureRegisterForm;
