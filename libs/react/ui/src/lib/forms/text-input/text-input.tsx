@@ -31,7 +31,6 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
           type="text"
           className="txt-input"
           id="name"
-          required={true}
           {...props}
         />
       </StyledTextInput>
