@@ -75,14 +75,23 @@ const StyledVotingListItem = styled.div`
 `;
 
 export const VotingListItem = (props: VotingListItemProps) => {
-  const { candidate } = props;
+  const {
+    candidate,
+    isLastVoted,
+    onCandidateDownVote,
+    onCandidateUpVote
+  } = props;
 
   const candidateCanDownVote = canDownVote(candidate);
   const candidateCanUpVote = canUpVote(candidate);
 
   return (
     <StyledVotingListItem>
-      <div className={`candidate-card no-select ${props.isLastVoted ? 'last-voted':''}`}>
+      <div
+        className={`candidate-card no-select ${
+          isLastVoted ? 'last-voted' : ''
+        }`}
+      >
         <div className="candidate-info">
           <h2>{`${candidate.firstname} ${candidate.lastname}`}</h2>
           <p className="candidate-slogan">{candidate.slogan}</p>
@@ -99,7 +108,7 @@ export const VotingListItem = (props: VotingListItemProps) => {
               color={candidateCanDownVote ? 'red' : 'gray'}
               onClick={() => {
                 if (candidateCanDownVote) {
-                  props.onCandidateDownVote(candidate.id);
+                  onCandidateDownVote(candidate.id);
                 }
               }}
             />
@@ -110,7 +119,7 @@ export const VotingListItem = (props: VotingListItemProps) => {
               color={candidateCanUpVote ? 'green' : 'gray'}
               onClick={() => {
                 if (candidateCanUpVote) {
-                  props.onCandidateUpVote(candidate.id);
+                  onCandidateUpVote(candidate.id);
                 }
               }}
             />

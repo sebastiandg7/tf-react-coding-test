@@ -15,16 +15,23 @@ export interface VotingListProps {
 const StyledVotingList = styled.div``;
 
 export const VotingList = (props: VotingListProps) => {
+  const {
+    candidates,
+    lastVotedCandidateId,
+    onCandidateUpVote,
+    onCandidateDownVote
+  } = props;
+
   return (
     <StyledVotingList>
       <ul>
-        {props.candidates.map(candidate => (
+        {candidates.map(candidate => (
           <VotingListItem
             key={candidate.id}
-            isLastVoted={props.lastVotedCandidateId === candidate.id}
+            isLastVoted={lastVotedCandidateId === candidate.id}
             candidate={candidate}
-            onCandidateUpVote={props.onCandidateUpVote}
-            onCandidateDownVote={props.onCandidateDownVote}
+            onCandidateUpVote={onCandidateUpVote}
+            onCandidateDownVote={onCandidateDownVote}
           />
         ))}
       </ul>

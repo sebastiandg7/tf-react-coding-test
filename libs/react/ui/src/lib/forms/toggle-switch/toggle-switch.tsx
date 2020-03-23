@@ -71,11 +71,13 @@ const StyledToggleSwitch = styled.div`
 `;
 
 export const ToggleSwitch = (props: ToggleSwitchProps) => {
+  const { value, rounded, onChange } = props;
+
   return (
     <StyledToggleSwitch>
       <label className="switch">
-        <input type="checkbox" value={'' + props.value} onChange={props.onChange} />
-        <span className={`slider ${props.rounded ? 'round' : ''}`}></span>
+        <input type="checkbox" value={'' + value} onChange={onChange} />
+        <span className={`slider ${rounded ? 'round' : ''}`}></span>
       </label>
     </StyledToggleSwitch>
   );
